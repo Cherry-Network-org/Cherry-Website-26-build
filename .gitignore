@@ -38,3 +38,7 @@ yarn-error.log*
 
 # figma reference data
 .figma-data/
+
+# ai / agent docs
+AGENTS.md
+CLAUDE.md
