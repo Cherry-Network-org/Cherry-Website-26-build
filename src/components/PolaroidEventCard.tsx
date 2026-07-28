@@ -34,7 +34,7 @@ export function PolaroidEventCard({
         <span className="inline-flex bg-black/25 px-2 py-1 font-[family-name:var(--font-inter)] text-[10px] font-black uppercase tracking-[0.22em] text-white">
           {event.category}
         </span>
-        <h3 className="mt-10 font-[family-name:var(--font-inter)] text-3xl font-black uppercase leading-[0.95] text-white">
+        <h3 className="mt-8 break-words font-[family-name:var(--font-inter)] text-2xl font-black uppercase leading-[0.95] text-white sm:text-3xl">
           {event.title}
         </h3>
       </div>

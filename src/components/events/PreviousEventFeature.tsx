@@ -37,7 +37,7 @@ export function PreviousEventFeature({
           <span className="hidden h-px w-16 bg-[#fc0162] lg:block" />
         </div>
 
-        <h3 className="mt-4 font-[family-name:var(--font-inter)] text-[clamp(2.4rem,6vw,4.75rem)] font-black uppercase leading-[0.92] text-white">
+        <h3 className="mt-4 break-words font-[family-name:var(--font-inter)] text-[clamp(1.6rem,3.4vw,2.85rem)] font-black uppercase leading-[1.05] tracking-tight text-white">
           <span>{event.title}</span>
           {event.highlight ? <span className="text-[#fc0162]">{highlight}</span> : null}
         </h3>

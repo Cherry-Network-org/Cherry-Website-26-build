@@ -73,12 +73,12 @@ export const galleryEvents: GalleryEvent[] = [
     date: "23rd April 2026",
     title: "The Last",
     highlight: "Commit",
-    photos: files("Redirect", "The Last Commit '26", [
-      "3011.jpg",
-      "3012.jpg",
-      "3013.jpg",
-      "3014.jpg",
-      "3015.jpg",
+    photos: files("TheLastCommit", "The Last Commit '26", [
+      "tlc1.jpg",
+      "tlc2.jpg",
+      "tlc3.jpg",
+      "tlc4.jpg",
+      "tlc5.jpg",
     ]),
   },
   {

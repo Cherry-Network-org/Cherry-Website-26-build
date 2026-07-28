@@ -71,7 +71,7 @@ export function HomeHero() {
           {/* Prominent CTA Buttons */}
           <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-7">
             <Link
-              href="#join"
+              href="/join"
               className="inline-flex h-[50px] w-[240px] items-center justify-center border-4 border-[#fc0162] bg-[linear-gradient(180deg,#fc0162_0%,#fc0139_100%)] font-[family-name:var(--font-inter)] text-lg font-black text-white shadow-[6px_6px_0_0_rgba(0,0,0,0.35)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               Join Cherry+ Network
