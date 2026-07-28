@@ -13,7 +13,7 @@ export type GalleryEvent = {
 
 /**
  * Drop images into public/gallery/<folder>/ and list the filenames here.
- * Example: files("Ataraxia", "Ataraxia ‘23", ["at1.jpg", "at2.jpg"])
+ * Example: files("Ataraxia", "Ataraxia 2.0", ["at1.jpg", "at2.jpg"])
  */
 function files(
   folder: string,
@@ -51,41 +51,11 @@ export const galleryCarouselSlides = [
 
 export const galleryEvents: GalleryEvent[] = [
   {
-    id: "app-archives",
-    date: "1st March 2024",
-    title: "App",
-    highlight: "Archives",
-    photos: [
-      ...files("AppArchives/Foreword", "App Archives — Foreword", [
-        "for1.jpg",
-        "for2.jpg",
-        "for3.jpg",
-        "for4.jpg",
-        "for5.jpg",
-      ]),
-      ...files("AppArchives/Preface", "App Archives — Preface", [
-        "pre1.jpg",
-        "pre2.jpg",
-        "pre3.jpg",
-        "pre4.jpg",
-        "pre5.jpg",
-        "pre6.jpg",
-      ]),
-      ...files("AppArchives/PostScript", "App Archives — PostScript", [
-        "pos1.jpg",
-        "pos2.jpg",
-        "pos3.jpg",
-        "pos4.jpg",
-        "pos5.jpg",
-      ]),
-    ],
-  },
-  {
-    id: "ataraxia-23",
-    date: "11th September 2023",
+    id: "ataraxia-20",
+    date: "11th - 14th February 2026",
     title: "Ataraxia",
-    highlight: "‘23",
-    photos: files("Ataraxia", "Ataraxia ‘23", [
+    highlight: "2.0",
+    photos: files("Ataraxia", "Ataraxia 2.0", [
       "at1.jpg",
       "at2.jpg",
       "at3.jpg",
@@ -99,25 +69,24 @@ export const galleryEvents: GalleryEvent[] = [
     ]),
   },
   {
-    id: "elysian-23",
-    date: "19th August 2023",
-    title: "Elysian",
-    highlight: "‘23",
-    photos: files("Elysian", "Elysian ‘23", [
-      "el1.jpg",
-      "el2.jpg",
-      "el3.jpg",
-      "el4.jpg",
-      "el5.jpg",
-      "el6.jpg",
+    id: "the-last-commit",
+    date: "23rd April 2026",
+    title: "The Last",
+    highlight: "Commit",
+    photos: files("Redirect", "The Last Commit '26", [
+      "3011.jpg",
+      "3012.jpg",
+      "3013.jpg",
+      "3014.jpg",
+      "3015.jpg",
     ]),
   },
   {
     id: "orphanage-visit",
-    date: "26th February 2023",
+    date: "12th April 2026",
     title: "Orphanage",
-    highlight: "Visit",
-    photos: files("OrphanageVisit", "Orphanage Visit", [
+    highlight: "Drive '26",
+    photos: files("OrphanageVisit", "Orphanage Drive '26", [
       "orphanage1.jpg",
       "orphanage2.jpg",
       "orphanage3.jpg",
@@ -126,27 +95,33 @@ export const galleryEvents: GalleryEvent[] = [
       "or6.jpg",
       "or7.jpg",
       "or8.jpg",
-      "or9.jpg",
-      "or10.jpg",
-      "or11.jpg",
-      "or12.jpg",
     ]),
   },
   {
-    id: "301-redirect",
-    date: "28th September 2022",
-    title: "301",
-    highlight: "Redirect",
-    photos: files("Redirect", "301 Redirect", [
-      "3011.jpg",
-      "3012.jpg",
-      "3013.jpg",
-      "3014.jpg",
-      "3015.jpg",
-      "3016.jpg",
-      "3017.jpg",
-      "3018.jpg",
-      "3019.jpg",
+    id: "robofest",
+    date: "10th - 11th September 2025",
+    title: "Robofest",
+    highlight: "'25 & DJ Night",
+    photos: files("AppArchives/Foreword", "Robofest '25", [
+      "for1.jpg",
+      "for2.jpg",
+      "for3.jpg",
+      "for4.jpg",
+      "for5.jpg",
+    ]),
+  },
+  {
+    id: "elysian-25",
+    date: "7th August 2025",
+    title: "Elysian",
+    highlight: "'25",
+    photos: files("Elysian", "Elysian '25", [
+      "el1.jpg",
+      "el2.jpg",
+      "el3.jpg",
+      "el4.jpg",
+      "el5.jpg",
+      "el6.jpg",
     ]),
   },
 ];

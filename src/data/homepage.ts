@@ -1,8 +1,9 @@
 import { endeavourDomains, techverseDomains } from "@/data/domains";
 export const heroMarqueeItems = [
   "upcoming events",
-  "elysian '26",
-  "robofest '26",
+  "ataraxia 2.0",
+  "robofest '25",
+  "the last commit '26",
 ];
 
 export const visionMissionCards = [
@@ -74,52 +75,52 @@ export const pillarSections = [
 
 export const activityCards = [
   {
-    category: "Featured",
-    title: "Ataraxia",
-    date: "26 February 2023",
-    location: "Campus Commons",
-    blurb:
-      "A full-sensory celebration that mixed music, interaction, and club energy into one unforgettable night.",
-  },
-  {
     category: "Flagship",
-    title: "301 Redirect",
-    date: "28 September 2022",
-    location: "Main Auditorium",
+    title: "Ataraxia 2.0",
+    date: "11 - 14 February 2026",
+    location: "Main Campus Grounds",
     blurb:
-      "A bold student experience designed to surprise, entertain, and pull the audience into the Cherry+ world.",
+      "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
   },
   {
-    category: "Spotlight",
-    title: "Rain Dance",
-    date: "12 August 2023",
-    location: "Open Grounds",
+    category: "Robotics & Tech",
+    title: "Robofest '25",
+    date: "10 - 11 September 2025",
+    location: "Techverse Arena",
     blurb:
-      "High-energy programming, crowd moments, and a playful campus atmosphere turned into a signature memory.",
+      "High-octane robotics competitions, team challenges, and tech showcases bringing together student builders and engineers.",
   },
   {
-    category: "Workshop",
-    title: "UX MasterClass",
-    date: "14 April 2024",
-    location: "Innovation Lab",
+    category: "Concert",
+    title: "Robofest DJ Night",
+    date: "11 September 2025",
+    location: "Main Stage",
     blurb:
-      "A focused learning session where students explored product thinking, interface craft, and design feedback loops.",
+      "An unforgettable DJ night wrapping up Robofest with massive music production, lights, and non-stop campus energy.",
   },
   {
-    category: "Hack Week",
-    title: "App Wars",
-    date: "3 May 2024",
-    location: "Tech Studio",
+    category: "Creative Tech",
+    title: "Elysian '25",
+    date: "7 August 2025",
+    location: "Auditorium & Innovation Hub",
     blurb:
-      "Teams moved fast from concept to prototype, combining engineering, design, and storytelling under pressure.",
+      "Techverse creative showcase combining interactive media, design storytelling, and student talent under one roof.",
   },
   {
-    category: "Showcase",
-    title: "Talent Showcase",
-    date: "19 July 2024",
-    location: "Student Center",
+    category: "Community Outreach",
+    title: "Orphanage Drive '26",
+    date: "12 April 2026",
+    location: "City Hope Home",
     blurb:
-      "A stage for members to share what they build, perform, and care about in front of the wider community.",
+      "A heartfelt social outreach drive where Cherry+ members spent the day engaging, sharing joy, and supporting local children.",
+  },
+  {
+    category: "Tenure Finale",
+    title: "The Last Commit '26",
+    date: "23 April 2026",
+    location: "Campus Amphitheatre",
+    blurb:
+      "The grand finale of the tenure celebrating team accomplishments, project handovers, and memorable tenure highlights.",
   },
 ];
 
