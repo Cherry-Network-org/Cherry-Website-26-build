@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type UniverseCardProps = {
   title: string;
@@ -9,18 +10,20 @@ type UniverseCardProps = {
 
 function UniverseCard({ title, image, imageOffset }: UniverseCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl transition hover:shadow-[0_0_30px_rgba(252,1,98,0.12)]">
-      <div className="relative aspect-[447/564] w-full">
-        <Image
-          src={image}
-          alt={`${title} universe card`}
-          fill
-          className={`object-cover object-top transition duration-500 group-hover:scale-[1.01] ${imageOffset ?? ""}`}
-          sizes="(max-width: 768px) 100vw, 50vw"
-          priority
-        />
-      </div>
-    </article>
+    <Link href="/domains" className="block">
+      <article className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl transition hover:shadow-[0_0_30px_rgba(252,1,98,0.12)]">
+        <div className="relative aspect-[447/564] w-full">
+          <Image
+            src={image}
+            alt={`${title} universe card`}
+            fill
+            className={`object-cover object-top transition duration-500 group-hover:scale-[1.01] ${imageOffset ?? ""}`}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
+        </div>
+      </article>
+    </Link>
   );
 }
 

@@ -94,39 +94,17 @@ export const previousEventGroups: PreviousEventGroup[] = [
     id: "techverse",
     title: "TECHVERSE",
     intro:
-      "Techverse events blend technical curiosity, robotics, and design execution so members can build and showcase their craft together.",
+      "Techverse is our technical domain focused on software development, hackathons, building, and engineering innovation.",
     events: [
-      {
-        id: "elysian-25",
-        date: "7 August 2025",
-        title: "Elysian",
-        highlight: "'25",
-        description:
-          "Techverse creative showcase combining interactive media, design storytelling, and student talent under one roof.",
-        imageSrc: "/images/events/elysian-poster.png",
-        imageAlt: "Elysian '25 event banner",
-        galleryHref: "/gallery#elysian-25",
-      },
-      {
-        id: "robofest-25",
-        date: "10 - 11 September 2025",
-        title: "Robofest",
-        highlight: "'25",
-        description:
-          "High-octane robotics competitions, team challenges, and tech showcases bringing together student builders and engineers.",
-        imageSrc: "/images/events/preface-poster.png",
-        imageAlt: "Robofest '25 event banner",
-        galleryHref: "/gallery#robofest",
-      },
       {
         id: "the-last-commit-26",
         date: "23 April 2026",
         title: "The Last Commit",
         highlight: "'26",
         description:
-          "The grand finale of the tenure celebrating team accomplishments, project handovers, and memorable tenure highlights.",
-        imageSrc: "/images/events/preface-poster.png",
-        imageAlt: "The Last Commit '26 event banner",
+          "The grand finale hackathon celebrating project builds, developer handovers, and technical milestones of the tenure.",
+        imageSrc: "/images/events/The Last Commit.png",
+        imageAlt: "The Last Commit '26 hackathon poster",
         galleryHref: "/gallery#the-last-commit",
       },
     ],
@@ -135,8 +113,41 @@ export const previousEventGroups: PreviousEventGroup[] = [
     id: "endeavour",
     title: "ENDEAVOUR",
     intro:
-      "Endeavour turns ideas into lived experiences, organizing flagship cultural festivals, DJ nights, and community outreach drives.",
+      "Endeavour turns ideas into lived experiences, organizing flagship cultural festivals, creative showcases, DJ nights, and community outreach drives.",
     events: [
+      {
+        id: "elysian-25",
+        date: "7 August 2025",
+        title: "Elysian",
+        highlight: "'25",
+        description:
+          "Endeavour creative showcase combining interactive media, design storytelling, stage performances, and student talent under one roof.",
+        imageSrc: "/images/events/Elysian.png",
+        imageAlt: "Elysian '25 event poster",
+        galleryHref: "/gallery#elysian-25",
+      },
+      {
+        id: "robofest-25",
+        date: "10 - 11 September 2025",
+        title: "Robofest",
+        highlight: "'25",
+        description:
+          "High-octane campus festival, team challenges, and interactive showcases bringing together student participants.",
+        imageSrc: "/images/events/preface-poster.png",
+        imageAlt: "Robofest '25 event poster",
+        galleryHref: "/gallery#robofest",
+      },
+      {
+        id: "robofest-dj-25",
+        date: "11 September 2025",
+        title: "Robofest DJ Night",
+        highlight: "'25",
+        description:
+          "An unforgettable DJ night wrapping up Robofest with massive music production, lights, and non-stop campus energy.",
+        imageSrc: "/images/events/preface-poster.png",
+        imageAlt: "Robofest DJ Night poster",
+        galleryHref: "/gallery#robofest",
+      },
       {
         id: "ataraxia-20",
         date: "11 - 14 February 2026",
@@ -144,8 +155,8 @@ export const previousEventGroups: PreviousEventGroup[] = [
         highlight: "2.0",
         description:
           "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
-        imageSrc: "/images/events/elysian-poster.png",
-        imageAlt: "Ataraxia 2.0 event banner",
+        imageSrc: "/images/events/Elysian.png",
+        imageAlt: "Ataraxia 2.0 event poster",
         galleryHref: "/gallery#ataraxia-20",
       },
       {
@@ -156,19 +167,8 @@ export const previousEventGroups: PreviousEventGroup[] = [
         description:
           "A heartfelt social outreach drive where Cherry+ members spent the day engaging, sharing joy, and supporting local children.",
         imageSrc: "/images/events/preface-poster.png",
-        imageAlt: "Orphanage Drive '26 event banner",
+        imageAlt: "Orphanage Drive '26 event poster",
         galleryHref: "/gallery#orphanage-visit",
-      },
-      {
-        id: "robofest-dj-25",
-        date: "11 September 2025",
-        title: "Robofest DJ Night",
-        highlight: "'25",
-        description:
-          "An unforgettable DJ night wrapping up Robofest with massive music production, lights, and non-stop campus energy.",
-        imageSrc: "/images/events/elysian-poster.png",
-        imageAlt: "Robofest DJ Night banner",
-        galleryHref: "/gallery#robofest",
       },
     ],
   },

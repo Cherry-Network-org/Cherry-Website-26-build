@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import { HomeCommunityCta } from "@/components/home/HomeCommunityCta";
 import { HomeFooter } from "@/components/home/HomeFooter";
@@ -41,6 +44,12 @@ const domainGroups = [
 const posterGroups = [domainGroups[1], domainGroups[0]];
 
 export function DomainPageContent() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  }, []);
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#090909] text-white">
       <div className="pointer-events-none absolute inset-0 spiderweb-bg opacity-65" />

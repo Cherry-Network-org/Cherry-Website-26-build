@@ -9,11 +9,11 @@ const socialLinks = [
 
 export function HomeFooter() {
   return (
-    <footer className="border-t-[5px] border-[#fc0162] bg-[#0e0e12]">
+    <footer className="relative z-10 border-t-[5px] border-[#fc0162] bg-[#0b0b0d] text-white">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_auto_1fr] lg:items-center">
           <div>
-            <p className="max-w-md font-[family-name:var(--font-poppins)] text-sm leading-7 text-[#c1c1c1]">
+            <p className="max-w-md font-[family-name:var(--font-poppins)] text-sm leading-7 text-[#dedede]">
               Team up with Cherry+ Network, the coolest club on campus, where we
               discover the secret to success and pave the way for your dreams
               through networking events, workshops, industry partnerships and
@@ -22,26 +22,38 @@ export function HomeFooter() {
           </div>
 
           <div className="justify-self-center">
-            <div className="relative h-20 w-[220px]">
+            <Link href="/" className="relative block h-20 w-[220px]">
               <Image
                 src="/images/brand/logo-full.png"
                 alt="Cherry+ Network"
                 fill
                 className="object-contain"
               />
-            </div>
+            </Link>
           </div>
 
           <div className="justify-self-end text-left lg:text-right">
-            <div className="space-y-2 font-[family-name:var(--font-poppins)] text-sm text-[#c1c1c1] sm:text-base">
-              <p>+91 97781 54742</p>
-              <p>techverse@cherrynetwork.in</p>
-              <p>www.cherrynetwork.in</p>
+            <div className="space-y-2 font-[family-name:var(--font-poppins)] text-sm font-semibold text-white sm:text-base">
+              <p>
+                <a href="tel:+919778154742" className="transition-colors hover:text-[#fc0162]">
+                  +91 97781 54742
+                </a>
+              </p>
+              <p>
+                <a href="mailto:techverse@cherrynetwork.in" className="transition-colors hover:text-[#fc0162]">
+                  techverse@cherrynetwork.in
+                </a>
+              </p>
+              <p>
+                <a href="https://www.cherrynetwork.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#fc0162]">
+                  www.cherrynetwork.in
+                </a>
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-5 border-t border-white/10 pt-8">
+        <div className="mt-10 flex flex-col items-center gap-5 border-t border-white/15 pt-8">
           <div className="flex items-center gap-5">
             <span className="hidden h-px w-14 bg-white/20 sm:block" />
             {socialLinks.map((item) => (
@@ -49,7 +61,7 @@ export function HomeFooter() {
             ))}
             <span className="hidden h-px w-14 bg-white/20 sm:block" />
           </div>
-          <p className="text-center font-[family-name:var(--font-montserrat)] text-sm font-light text-[#c1c1c1]">
+          <p className="text-center font-[family-name:var(--font-montserrat)] text-sm font-medium text-[#dedede]">
             Crafted with &lt;3 by your friends at Cherry+ Network
           </p>
         </div>

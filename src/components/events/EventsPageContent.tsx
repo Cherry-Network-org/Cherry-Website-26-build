@@ -77,7 +77,7 @@ export function EventsPageContent() {
             />
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <Link
-                href="/domains#techverse"
+                href="/domains"
                 className="block overflow-hidden border-[3px] border-black bg-white transition-transform duration-300 hover:-translate-y-1"
               >
                 <Image
@@ -89,7 +89,7 @@ export function EventsPageContent() {
                 />
               </Link>
               <Link
-                href="/domains#endeavour"
+                href="/domains"
                 className="block overflow-hidden border-[3px] border-black bg-white transition-transform duration-300 hover:-translate-y-1"
               >
                 <Image

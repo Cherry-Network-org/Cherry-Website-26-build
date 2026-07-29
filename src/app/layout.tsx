@@ -54,7 +54,14 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${manrope.variable} ${rubikMono.variable} ${poppins.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[#0b0b0b] text-white">{children}</body>
+      <body className="min-h-full bg-[#0b0b0b] text-white">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } window.scrollTo(0, 0);`,
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

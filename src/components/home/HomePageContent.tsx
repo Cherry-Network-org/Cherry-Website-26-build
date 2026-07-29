@@ -1,5 +1,4 @@
 import { HomeActivities } from "@/components/home/HomeActivities";
-import { HomeCommunityCta } from "@/components/home/HomeCommunityCta";
 import { HomeFooter } from "@/components/home/HomeFooter";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeJourney } from "@/components/home/HomeJourney";
@@ -18,7 +17,6 @@ export function HomePageContent() {
       <HomePillars />
       <HomeActivities />
       <HomeStats />
-      <HomeCommunityCta />
       <HomeFooter />
     </main>
   );

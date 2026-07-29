@@ -46,30 +46,6 @@ export function HomeCommunityCta() {
             </div>
           </div>
         </div>
-
-        {/* Travel Home / back-to-top link */}
-        <div className="mt-8 flex justify-center">
-          <a
-            href="#"
-            className="group inline-flex items-center gap-2 font-[family-name:var(--font-inter)] text-xs font-bold uppercase tracking-[0.18em] text-white/60 transition-colors hover:text-[#fc0162]"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="transition-transform group-hover:-translate-y-0.5"
-              aria-hidden
-            >
-              <path d="M12 19V5M5 12l7-7 7 7" />
-            </svg>
-            Travel Home
-          </a>
-        </div>
       </div>
     </ScrollReveal>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SmokeLayer } from "@/components/SmokeLayer";
 import { communityStats } from "@/data/homepage";
@@ -10,7 +11,7 @@ export function HomeStats() {
       <SmokeLayer variant="ambient" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section eyebrow with decorative lines */}
-        <div className="flex items-center justify-center gap-4 mb-6">
+        <div className="mb-6 flex items-center justify-center gap-4">
           <span className="h-px w-20 bg-white/30" />
           <p className="font-[family-name:var(--font-inter)] text-[10px] font-black uppercase tracking-[0.42em] text-white/70">
             Our Community
@@ -34,18 +35,16 @@ export function HomeStats() {
             <ScrollReveal
               key={stat.label}
               delay={index * 120}
-              className="group relative border border-[#fc0162]/40 bg-[#121212]/90 px-6 py-8 text-center shadow-[8px_8px_0_0_rgba(252,1,98,0.12)] transition-all duration-300 hover:border-[#fc0162] hover:shadow-[10px_10px_0_0_rgba(252,1,98,0.22)] hover:-translate-y-1"
+              className="group relative border border-[#fc0162]/40 bg-[#121212]/90 px-6 py-8 text-center shadow-[8px_8px_0_0_rgba(252,1,98,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#fc0162] hover:shadow-[10px_10px_0_0_rgba(252,1,98,0.22)]"
             >
               {/* Subtle corner accent */}
-              <div className="absolute top-0 left-0 h-5 w-5 border-t-2 border-l-2 border-[#fc0162]/50" />
+              <div className="absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-[#fc0162]/50" />
               <div className="absolute bottom-0 right-0 h-5 w-5 border-b-2 border-r-2 border-[#fc0162]/50" />
 
               <div className="mx-auto flex h-11 w-11 items-center justify-center text-white/90">
                 <StatIcon kind={stat.icon} />
               </div>
-              <p className="mt-5 font-[family-name:var(--font-inter)] text-[clamp(2rem,4vw,3.2rem)] font-black uppercase text-[#fc0162]">
-                {stat.value}
-              </p>
+              <CounterNumber value={stat.value} />
               <p className="mt-2 font-[family-name:var(--font-manrope)] text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
                 {stat.label}
               </p>
@@ -54,6 +53,63 @@ export function HomeStats() {
         </div>
       </div>
     </ScrollReveal>
+  );
+}
+
+function CounterNumber({ value }: { value: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLParagraphElement>(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const numericTarget = parseInt(value.replace(/[^0-9]/g, ""), 10) || 0;
+  const suffix = value.replace(/[0-9]/g, "");
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node || hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          observer.unobserve(entry.target);
+
+          const duration = 2000;
+          const startTime = performance.now();
+
+          const animate = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+            const currentVal = Math.floor(easeOutProgress * numericTarget);
+
+            setCount(currentVal);
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            } else {
+              setCount(numericTarget);
+            }
+          };
+
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [numericTarget, hasAnimated]);
+
+  return (
+    <p
+      ref={ref}
+      className="mt-5 font-[family-name:var(--font-inter)] text-[clamp(2rem,4vw,3.2rem)] font-black uppercase text-[#fc0162]"
+    >
+      {count}
+      {suffix}
+    </p>
   );
 }
 
