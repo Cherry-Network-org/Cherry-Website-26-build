@@ -11,6 +11,10 @@ export type TeamMember = {
   image?: string;
   domain: DomainFilter;
   subDomain?: SubDomainFilter;
+  Linkedin?: string;
+  linkedin?: string;
+  Github?: string;
+  github?: string;
 };
 
 export type TeamSection = {
@@ -39,6 +43,8 @@ export const teamSections: TeamSection[] = [
           bio: "Visionary co-founder driving the technical direction and growth of Cherry+ Network.",
           image: "/images/mentors/Aditya Krishnan_Co Founder.jpg",
           domain: "techverse",
+          linkedin: "https://www.linkedin.com/in/aditya-krishnan-0740/",
+          Github: "https://github.com/Wolferino-74",
         },
         {
           id: "f2",
@@ -47,6 +53,9 @@ export const teamSections: TeamSection[] = [
           bio: "Co-founder shaping the community, culture, and outreach of Cherry+ Network.",
           image: "/images/mentors/Siddhant Vashistha_Co founder.jpg",
           domain: "endeavour",
+          Linkedin: "https://www.linkedin.com/in/siddhant-vashistha",
+          Github: "https://www.instagram.com/siddhantvashistha",
+
         },
       ],
     ],
@@ -68,6 +77,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/mentors/Mentor Aditya Coomar.jpg",
           domain: "techverse",
           subDomain: "web-dev",
+          Linkedin: "https://www.linkedin.com/in/aditya-coomar/",
+          Github: "https://github.com/Aditya-Coomar",
         },
         {
           id: "m2",
@@ -77,6 +88,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/mentors/Mentor Aditri Rathore.jpg",
           domain: "techverse",
           subDomain: "app-dev",
+          Linkedin: "https://www.linkedin.com/in/aditri-rathore-31b282310/",
+          Github: "https://github.com/Aditri-R",
         },
         {
           id: "m3",
@@ -85,6 +98,8 @@ export const teamSections: TeamSection[] = [
           bio: "Supporting members with strategic thinking and creative problem-solving.",
           image: "/images/mentors/Mentor Priyanshika Rai.jpg",
           domain: "endeavour",
+          Linkedin: "https://www.linkedin.com/in/priyanshika-rai-ba985b273/",
+          Github: "https://github.com/Pr737",
         },
       ],
       [
@@ -96,6 +111,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/mentors/Mentor Aaditya Nigam.jpg",
           domain: "techverse",
           subDomain: "ui-ux",
+          Linkedin: "https://www.linkedin.com/in/aaditya-nigam-student/",
+          Github: "https://github.com/Aadityanigam06",
         },
         {
           id: "m5",
@@ -104,6 +121,8 @@ export const teamSections: TeamSection[] = [
           bio: "Inspiring members through collaborative learning and shared experiences.",
           image: "/images/mentors/Mentor Abhilipsa Sahoo.jpg",
           domain: "endeavour",
+          Linkedin: "https://www.linkedin.com/in/abhilipsa-sahoo-497797227/",
+          Github: "https://github.com/Abhilipsasahoo",
         },
         {
           id: "m6",
@@ -112,6 +131,8 @@ export const teamSections: TeamSection[] = [
           bio: "Bridging the gap between ideas and execution with practical mentorship.",
           image: "/images/mentors/Mentor Shreyas Manchanda.jpg",
           domain: "endeavour",
+          Linkedin: "https://www.linkedin.com/in/shreyasmanchanda/",
+          Github: "https://github.com/ShreyasManchanda",
         },
       ],
       [
@@ -122,6 +143,8 @@ export const teamSections: TeamSection[] = [
           bio: "Dedicated to fostering creativity and critical thinking within the community.",
           image: "/images/mentors/Mentor Chavan Aditi Anand.jpg",
           domain: "endeavour",
+          Linkedin: "https://www.linkedin.com/in/aditi-chavan-284977287/",
+          Github: "https://github.com/aaditi72",
         },
       ],
     ],
@@ -142,6 +165,8 @@ export const teamSections: TeamSection[] = [
           bio: "Steering the strategic direction of Cherry+ Network and driving its long-term vision.",
           image: "/images/execs/ED Atharv Gogia.jpg",
           domain: "techverse",
+          Linkedin: "https://www.linkedin.com/in/atharv-gogia/",
+          Github: "",
         },
         {
           id: "dir2",
@@ -150,6 +175,8 @@ export const teamSections: TeamSection[] = [
           bio: "Overseeing day-to-day operations and ensuring seamless coordination across all teams.",
           image: "/images/execs/COO Medhansh Shankpal.jpg",
           domain: "endeavour",
+          Linkedin: "https://www.linkedin.com/in/medhansh-shankpal-0b14b2326/",
+          Github: "",
         },
       ],
     ],
@@ -171,6 +198,8 @@ export const teamSections: TeamSection[] = [
           bio: "Leading the technical vision and driving innovation across the engineering teams.",
           image: "/images/execs/Tech EXEC Tejas Sharma.jpg",
           domain: "techverse",
+          Linkedin: "https://github.com/TejasSharma356",
+          Github: "https://www.linkedin.com/in/tejassharmaaa/",
         },
         {
           id: "e2",
@@ -179,6 +208,8 @@ export const teamSections: TeamSection[] = [
           bio: "Architecting robust solutions and mentoring the technical team.",
           image: "/images/execs/Tech EXEC Vighnesh Singh Dhanai.jpg",
           domain: "techverse",
+          Linkedin: "https://www.linkedin.com/in/vighnesh-singh-dhanai-b93118349/",
+          Github: "https://github.com/Boomerforlife",
         },
       ],
       // Corporate execs — only under Endeavour → Corporate
@@ -191,6 +222,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/execs/Corp EXEC AYush Dungrakoti.jpg",
           domain: "endeavour",
           subDomain: "corporate",
+          Linkedin: "",
+          Github: "",
         },
         {
           id: "e4",
@@ -200,6 +233,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/execs/Corp EXEC Mohak Dhawan.jpg",
           domain: "endeavour",
           subDomain: "corporate",
+          Linkedin: "",
+          Github: "",
         },
       ],
       // Design exec — only under Endeavour → Design
@@ -212,6 +247,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/execs/Design EXEC Bhavika Dutta.jpg",
           domain: "endeavour",
           subDomain: "design",
+          Linkedin: "",
+          Github: "https://github.com/helloiambd",
         },
       ],
       // Events exec — only under Endeavour → Events
@@ -224,6 +261,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/execs/Event EXEC AYAN Khan.jpg",
           domain: "endeavour",
           subDomain: "events",
+          Linkedin: "",
+          Github: "",
         },
       ],
     ],
@@ -246,6 +285,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/managers/Tech.JPG",
           domain: "techverse",
           subDomain: "app-dev",
+          Linkedin: "",
+          Github: "",
         },
       ],
       [
@@ -257,6 +298,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/managers/Tech.JPG",
           domain: "techverse",
           subDomain: "web-dev",
+          Linkedin: "",
+          Github: "",
         },
       ],
       [
@@ -268,6 +311,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/managers/Tech.JPG",
           domain: "techverse",
           subDomain: "ui-ux",
+          Linkedin: "",
+          Github: "",
         },
       ],
       [
@@ -279,6 +324,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/managers/Events.JPG",
           domain: "endeavour",
           subDomain: "events",
+          Linkedin: "",
+          Github: "",
         },
       ],
       [
@@ -290,6 +337,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/managers/Corp.JPG",
           domain: "endeavour",
           subDomain: "corporate",
+          Linkedin: "",
+          Github: "",
         },
       ],
       [
@@ -301,6 +350,8 @@ export const teamSections: TeamSection[] = [
           image: "/images/managers/Design.JPG",
           domain: "endeavour",
           subDomain: "design",
+          Linkedin: "",
+          Github: "",
         },
       ],
     ],

@@ -43,10 +43,10 @@ export function DynamicNameCard({ member }: NameCardProps) {
         {/* ── BACK ──────────────────────────────────────────────────────── */}
         <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-[26px] bg-[#dc143c] p-4 shadow-lg">
           <div className="flex items-center gap-3">
-            <SocialIcon label="LinkedIn">
+            <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
               <LinkedInIcon />
             </SocialIcon>
-            <SocialIcon label="GitHub">
+            <SocialIcon label="GitHub" href={member.Github || member.github}>
               <GitHubIcon />
             </SocialIcon>
           </div>
@@ -96,10 +96,10 @@ export function NameCard({ member }: NameCardProps) {
         {/* ── BACK ──────────────────────────────────────────────────────── */}
         <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-[30px] bg-[#dc143c] p-5 shadow-lg">
           <div className="flex items-center gap-3">
-            <SocialIcon label="LinkedIn">
+            <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
               <LinkedInIcon />
             </SocialIcon>
-            <SocialIcon label="GitHub">
+            <SocialIcon label="GitHub" href={member.Github || member.github}>
               <GitHubIcon />
             </SocialIcon>
           </div>
@@ -115,14 +115,18 @@ export function NameCard({ member }: NameCardProps) {
 
 function SocialIcon({
   label,
+  href,
   children,
 }: {
   label: string;
+  href?: string;
   children: React.ReactNode;
 }) {
   return (
     <a
-      href="#"
+      href={href || "#"}
+      target={href && href !== "#" ? "_blank" : undefined}
+      rel={href && href !== "#" ? "noopener noreferrer" : undefined}
       aria-label={label}
       className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black transition hover:scale-105"
     >

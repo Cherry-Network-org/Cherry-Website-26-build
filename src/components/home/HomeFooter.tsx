@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "X", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/cherry.network/" },
+  { label: "X", href: "https://x.com/network_cherry" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/cherry-network/" },
 ];
 
 export function HomeFooter() {
@@ -74,6 +74,8 @@ function SocialBadge({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-[#fc0162] hover:text-[#fc0162]"
     >
