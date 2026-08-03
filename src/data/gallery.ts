@@ -79,6 +79,10 @@ export const galleryEvents: GalleryEvent[] = [
       "tlc3.jpg",
       "tlc4.jpg",
       "tlc5.jpg",
+      "tlc6.jpg",
+      "tlc7.jpg",
+      "tlc8.jpg",
+      "tlc9.jpg",
     ]),
   },
   {
@@ -87,14 +91,16 @@ export const galleryEvents: GalleryEvent[] = [
     title: "Orphanage",
     highlight: "Drive '26",
     photos: files("OrphanageVisit", "Orphanage Drive '26", [
-      "orphanage1.jpg",
-      "orphanage2.jpg",
       "orphanage3.jpg",
       "orphanage4.jpg",
       "or5.jpg",
       "or6.jpg",
       "or7.jpg",
       "or8.jpg",
+      "or9.jpg",
+      "or10.jpg",
+      "or11.jpg",
+      "or12.jpg",
     ]),
   },
   {
@@ -108,6 +114,8 @@ export const galleryEvents: GalleryEvent[] = [
       "for3.jpg",
       "for4.jpg",
       "for5.jpg",
+      "for6.jpg",
+      "for7.jpg",
     ]),
   },
   {
@@ -122,6 +130,9 @@ export const galleryEvents: GalleryEvent[] = [
       "el4.jpg",
       "el5.jpg",
       "el6.jpg",
+      "el7.jpg",
+      "el8.jpg",
+      "el9.jpg",
     ]),
   },
 ];
