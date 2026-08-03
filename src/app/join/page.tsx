@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
@@ -10,10 +10,46 @@ export default function JoinPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [domain, setDomain] = useState("techverse");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    // Check if user has already submitted from this browser/session
+    const savedData = localStorage.getItem("cherry_join_submitted");
+    if (savedData) {
+      try {
+        const parsed = JSON.parse(savedData);
+        setName(parsed.name || "");
+        setEmail(parsed.email || "");
+        setSubmitted(true);
+      } catch {
+        setSubmitted(true);
+      }
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
+    if (!email.trim() || !name.trim()) return;
+
+    setLoading(true);
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanName = name.trim();
+
+    try {
+      await fetch("/api/join", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: cleanName, email: cleanEmail, domain }),
+      });
+    } catch (err) {
+      console.error("Form submission error:", err);
+    } finally {
+      // Store in localStorage to prevent duplicate submissions from this session/browser
+      localStorage.setItem(
+        "cherry_join_submitted",
+        JSON.stringify({ name: cleanName, email: cleanEmail, domain, date: new Date().toISOString() })
+      );
+      setLoading(false);
       setSubmitted(true);
     }
   };
@@ -101,9 +137,10 @@ export default function JoinPage() {
                 </div>
                 <button
                   type="submit"
-                  className="mt-2 w-full border-[3px] border-[#fc0162] bg-[linear-gradient(180deg,#fc0162_0%,#fc0139_100%)] py-3 font-[family-name:var(--font-inter)] text-sm font-black uppercase tracking-widest text-white shadow-[4px_4px_0_0_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-0.5"
+                  disabled={loading}
+                  className="mt-2 w-full border-[3px] border-[#fc0162] bg-[linear-gradient(180deg,#fc0162_0%,#fc0139_100%)] py-3 font-[family-name:var(--font-inter)] text-sm font-black uppercase tracking-widest text-white shadow-[4px_4px_0_0_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-0.5 disabled:opacity-50 disabled:hover:translate-y-0"
                 >
-                  Notify Me When Open
+                  {loading ? "Submitting..." : "Notify Me When Open"}
                 </button>
               </form>
             ) : (
