@@ -68,40 +68,6 @@ export function EventsPageContent() {
               </ScrollReveal>
             ))}
           </div>
-
-          <ScrollReveal className="mt-18">
-            <HomeSectionHeading
-              eyebrow="Pick your universe"
-              title="PICK YOUR UNIVERSE"
-              accent="UNIVERSE"
-            />
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
-              <Link
-                href="/domains"
-                className="block overflow-hidden border-[3px] border-black bg-white transition-transform duration-300 hover:-translate-y-1"
-              >
-                <Image
-                  src="/images/universes/techverse-card.png"
-                  alt="Techverse poster"
-                  width={860}
-                  height={1080}
-                  className="h-full w-full object-cover"
-                />
-              </Link>
-              <Link
-                href="/domains"
-                className="block overflow-hidden border-[3px] border-black bg-white transition-transform duration-300 hover:-translate-y-1"
-              >
-                <Image
-                  src="/images/universes/endeavour-card.png"
-                  alt="Endeavour poster"
-                  width={860}
-                  height={1080}
-                  className="h-full w-full object-cover"
-                />
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </ScrollReveal>
 

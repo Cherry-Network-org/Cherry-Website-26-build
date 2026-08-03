@@ -81,6 +81,7 @@ export function TeamPageContent() {
           columns={section.columns}
           rows={filterRows(section.rows, domain, subDomain)}
           cardVariant={section.cardVariant}
+          showSocials={false}
         />
       ))}
 

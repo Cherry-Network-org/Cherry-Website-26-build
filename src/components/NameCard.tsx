@@ -7,7 +7,10 @@ type NameCardProps = {
 
 /** Dynamic card — natural portrait aspect ratio, no fixed height, no side gaps.
  *  Used for Founders and Mentors where photos vary in size. */
-export function DynamicNameCard({ member }: NameCardProps) {
+export function DynamicNameCard({
+  member,
+  showSocials = true,
+}: NameCardProps & { showSocials?: boolean }) {
   return (
     <div className="flip-card mx-auto h-[255px] w-full max-w-[300px]" tabIndex={0}>
       <div className="flip-card-inner">
@@ -20,7 +23,7 @@ export function DynamicNameCard({ member }: NameCardProps) {
                 src={member.image}
                 alt={member.name}
                 fill
-                className="object-cover object-top"
+                className={`object-cover object-${member.imagePosition ?? "top"}`}
                 sizes="300px"
               />
             )}
@@ -42,14 +45,16 @@ export function DynamicNameCard({ member }: NameCardProps) {
 
         {/* ── BACK ──────────────────────────────────────────────────────── */}
         <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-[26px] bg-[#dc143c] p-4 shadow-lg">
-          <div className="flex items-center gap-3">
-            <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
-              <LinkedInIcon />
-            </SocialIcon>
-            <SocialIcon label="GitHub" href={member.Github || member.github}>
-              <GitHubIcon />
-            </SocialIcon>
-          </div>
+          {showSocials && (
+            <div className="flex items-center gap-3">
+              <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
+                <LinkedInIcon />
+              </SocialIcon>
+              <SocialIcon label="GitHub" href={member.Github || member.github}>
+                <GitHubIcon />
+              </SocialIcon>
+            </div>
+          )}
 
           <p className="font-[family-name:var(--font-inter)] text-xs leading-relaxed text-black sm:text-sm">
             {member.bio}
@@ -73,7 +78,7 @@ export function NameCard({ member }: NameCardProps) {
                 src={member.image}
                 alt={member.name}
                 fill
-                className="object-cover object-top"
+                className={`object-cover object-${member.imagePosition ?? "top"}`}
                 sizes="342px"
               />
             )}

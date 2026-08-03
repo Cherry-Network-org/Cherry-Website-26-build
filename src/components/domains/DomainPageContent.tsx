@@ -44,9 +44,30 @@ const domainGroups = [
 const posterGroups = [domainGroups[1], domainGroups[0]];
 
 export function DomainPageContent() {
+  const scrollToDomainSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const anchor = document.getElementById(`anchor-${id}`);
+    if (anchor) {
+      const y = anchor.getBoundingClientRect().top + window.pageYOffset - 20;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      window.history.replaceState(null, "", `#${id}`);
+    }
+  };
+
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      const hash = window.location.hash.replace("#", "").toLowerCase();
+      if (hash === "techverse" || hash === "endeavour") {
+        setTimeout(() => {
+          const anchor = document.getElementById(`anchor-${hash}`);
+          if (anchor) {
+            const y = anchor.getBoundingClientRect().top + window.pageYOffset - 20;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }, 300);
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      }
     }
   }, []);
 
@@ -74,7 +95,8 @@ export function DomainPageContent() {
               <ScrollReveal
                 key={group.id}
                 as="section"
-                id={group.id}
+                id={`mobile-${group.id}`}
+                data-domain-section={group.id}
                 delay={groupIndex * 100}
                 className="space-y-10"
               >
@@ -84,7 +106,11 @@ export function DomainPageContent() {
 
                 <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
                   <div className="relative mx-auto w-full max-w-[260px] lg:max-w-none">
-                    <div className="-rotate-[11deg] overflow-hidden border-[4px] border-black bg-white shadow-[10px_10px_0_0_rgba(0,0,0,0.35)]">
+                    <a
+                      href={`#${group.id}`}
+                      onClick={(e) => scrollToDomainSection(e, group.id)}
+                      className="block -rotate-[11deg] overflow-hidden border-[4px] border-black bg-white shadow-[10px_10px_0_0_rgba(0,0,0,0.35)] transition-transform duration-300 hover:scale-105"
+                    >
                       <Image
                         src={group.posterSrc}
                         alt={group.posterAlt}
@@ -92,7 +118,7 @@ export function DomainPageContent() {
                         height={1080}
                         className="h-full w-full object-cover"
                       />
-                    </div>
+                    </a>
                   </div>
 
                   <div>
@@ -164,7 +190,11 @@ export function DomainPageContent() {
             <div className="mx-auto mt-[38px] grid max-w-[984px] grid-cols-2 gap-[90px]">
               {posterGroups.map((group, index) => (
                 <ScrollReveal key={group.id} delay={index * 120} className="w-full">
-                  <div className="overflow-hidden border-[5px] border-black bg-black shadow-[16px_16px_0_0_rgba(0,0,0,0.35)]">
+                  <a
+                    href={`#${group.id}`}
+                    onClick={(e) => scrollToDomainSection(e, group.id)}
+                    className="block overflow-hidden border-[5px] border-black bg-black shadow-[16px_16px_0_0_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[16px_20px_0_0_rgba(252,1,98,0.3)] cursor-pointer"
+                  >
                     <Image
                       src={group.posterSrc}
                       alt={group.posterAlt}
@@ -173,30 +203,31 @@ export function DomainPageContent() {
                       className="h-full w-full object-cover"
                       priority={index === 0}
                     />
-                  </div>
+                  </a>
                 </ScrollReveal>
               ))}
             </div>
 
             <div className="mt-[128px] space-y-[96px]">
               {domainGroups.map((group, groupIndex) => (
-                <ScrollReveal
-                  key={`${group.id}-desktop`}
-                  as="section"
-                  id={group.id}
-                  delay={groupIndex * 100}
-                  className="space-y-[64px]"
-                >
-                  <DesktopSectionBanner title={group.title} description={group.description} />
+                <div key={`${group.id}-desktop`}>
+                  <div id={`anchor-${group.id}`} className="scroll-mt-20" />
+                  <ScrollReveal
+                    as="section"
+                    delay={groupIndex * 100}
+                    className="space-y-[64px]"
+                  >
+                    <DesktopSectionBanner title={group.title} description={group.description} />
 
-                  <div className="space-y-[42px]">
-                    {group.items.map((item, index) => (
-                      <ScrollReveal key={item.title} delay={index * 80}>
-                        <DesktopDomainRow item={item} index={index} />
-                      </ScrollReveal>
-                    ))}
-                  </div>
-                </ScrollReveal>
+                    <div className="space-y-[42px]">
+                      {group.items.map((item, index) => (
+                        <ScrollReveal key={item.title} delay={index * 80}>
+                          <DesktopDomainRow item={item} index={index} />
+                        </ScrollReveal>
+                      ))}
+                    </div>
+                  </ScrollReveal>
+                </div>
               ))}
             </div>
           </div>

@@ -133,7 +133,7 @@ export const previousEventGroups: PreviousEventGroup[] = [
         highlight: "'25",
         description:
           "High-octane campus festival, team challenges, and interactive showcases bringing together student participants.",
-        imageSrc: "/images/events/preface-poster.png",
+        imageSrc: "/images/events/ROBOFESTNEW.png",
         imageAlt: "Robofest '25 event poster",
         galleryHref: "/gallery#robofest",
       },
@@ -144,7 +144,7 @@ export const previousEventGroups: PreviousEventGroup[] = [
         highlight: "'25",
         description:
           "An unforgettable DJ night wrapping up Robofest with massive music production, lights, and non-stop campus energy.",
-        imageSrc: "/images/events/preface-poster.png",
+        imageSrc: "/images/events/Dj NIght.png",
         imageAlt: "Robofest DJ Night poster",
         galleryHref: "/gallery#robofest",
       },
@@ -155,7 +155,7 @@ export const previousEventGroups: PreviousEventGroup[] = [
         highlight: "2.0",
         description:
           "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
-        imageSrc: "/images/events/Elysian.png",
+        imageSrc: "/images/events/Ataraxia-Main.png",
         imageAlt: "Ataraxia 2.0 event poster",
         galleryHref: "/gallery#ataraxia-20",
       },
@@ -166,8 +166,8 @@ export const previousEventGroups: PreviousEventGroup[] = [
         highlight: "'26",
         description:
           "A heartfelt social outreach drive where Cherry+ members spent the day engaging, sharing joy, and supporting local children.",
-        imageSrc: "/images/events/preface-poster.png",
-        imageAlt: "Orphanage Drive '26 event poster",
+        imageSrc: "/images/events/Orphanage-Drive.png",
+        imageAlt: "Orphanage Drive '26 event photo",
         galleryHref: "/gallery#orphanage-visit",
       },
     ],

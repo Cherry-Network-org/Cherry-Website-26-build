@@ -7,16 +7,19 @@ type TeamSectionProps = {
   columns: 2 | 3;
   rows: TeamMember[][];
   cardVariant?: "default" | "dynamic";
+  showSocials?: boolean;
 };
 
 function TeamRow({
   members,
   columns,
   cardVariant,
+  showSocials = true,
 }: {
   members: TeamMember[];
   columns: 2 | 3;
   cardVariant?: "default" | "dynamic";
+  showSocials?: boolean;
 }) {
   const useCenteredFlex =
     (columns === 3 && members.length < 3) ||
@@ -24,7 +27,7 @@ function TeamRow({
 
   const renderCard = (member: TeamMember) =>
     cardVariant === "dynamic" ? (
-      <DynamicNameCard key={member.id} member={member} />
+      <DynamicNameCard key={member.id} member={member} showSocials={showSocials} />
     ) : (
       <NameCard key={member.id} member={member} />
     );
@@ -50,7 +53,7 @@ function TeamRow({
   );
 }
 
-export function TeamSection({ title, columns, rows, cardVariant }: TeamSectionProps) {
+export function TeamSection({ title, columns, rows, cardVariant, showSocials }: TeamSectionProps) {
   const visibleRows = rows.filter((row) => row.length > 0);
 
   if (visibleRows.length === 0) return null;
@@ -69,6 +72,7 @@ export function TeamSection({ title, columns, rows, cardVariant }: TeamSectionPr
               members={row}
               columns={columns}
               cardVariant={cardVariant}
+              showSocials={showSocials}
             />
           ))}
         </div>
