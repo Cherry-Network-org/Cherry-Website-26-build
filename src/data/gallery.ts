@@ -44,7 +44,7 @@ export const galleryCarouselSlides = [
   },
   {
     id: "slide-4",
-    src: "/gallery/carousel/carousel4.jpeg",
+    src: "/gallery/carousel/carousel2.jpeg",
     alt: "Cherry+ Network community gathering",
   },
 ];
@@ -59,9 +59,7 @@ export const galleryEvents: GalleryEvent[] = [
       "at1.jpg",
       "at2.jpg",
       "at3.jpg",
-      "at4.jpg",
       "at5.jpg",
-      "at6.jpg",
       "at7.jpg",
       "at8.jpg",
       "at9.jpg",
@@ -75,7 +73,6 @@ export const galleryEvents: GalleryEvent[] = [
     highlight: "Commit",
     photos: files("TheLastCommit", "The Last Commit '26", [
       "tlc1.jpg",
-      "tlc2.jpg",
       "tlc3.jpg",
       "tlc4.jpg",
       "tlc5.jpg",
@@ -96,8 +93,6 @@ export const galleryEvents: GalleryEvent[] = [
       "or5.jpg",
       "or6.jpg",
       "or7.jpg",
-      "or8.jpg",
-      "or9.jpg",
       "or10.jpg",
       "or11.jpg",
       "or12.jpg",
@@ -116,6 +111,7 @@ export const galleryEvents: GalleryEvent[] = [
       "for5.jpg",
       "for6.jpg",
       "for7.jpg",
+      "for8.jpg",
     ]),
   },
   {
@@ -125,7 +121,6 @@ export const galleryEvents: GalleryEvent[] = [
     highlight: "'25",
     photos: files("Elysian", "Elysian '25", [
       "el1.jpg",
-      "el2.jpg",
       "el3.jpg",
       "el4.jpg",
       "el5.jpg",
