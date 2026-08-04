@@ -13,36 +13,24 @@ export async function POST(request: Request) {
 
     const scriptUrl = process.env.GOOGLE_SHEET_WEBAPP_URL;
 
-    if (!scriptUrl) {
-      console.error(
-        "CRITICAL MISSING CONFIG: GOOGLE_SHEET_WEBAPP_URL is not set in environment variables on deployment server."
-      );
-      return NextResponse.json(
-        { error: "Server configuration error. Environment variable missing." },
-        { status: 500 }
-      );
-    }
-
-    // Send POST request to Google Apps Script Web App
-    const res = await fetch(scriptUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-      body: JSON.stringify({
-        name,
-        email,
-        domain,
-        timestamp: new Date().toLocaleString("en-IN", {
-          timeZone: "Asia/Kolkata",
+    if (scriptUrl) {
+      // Send POST request to Google Apps Script Web App
+      await fetch(scriptUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          domain,
+          timestamp: new Date().toLocaleString("en-IN", {
+            timeZone: "Asia/Kolkata",
+          }),
         }),
-      }),
-    });
-
-    if (!res.ok) {
-      const errorText = await res.text();
-      console.error("Google Apps Script response error:", res.status, errorText);
+      });
+    } else {
+      console.warn("GOOGLE_SHEET_WEBAPP_URL is not configured in .env.local");
     }
 
     return NextResponse.json({ success: true });
