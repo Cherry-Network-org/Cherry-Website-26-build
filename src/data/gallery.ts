@@ -72,7 +72,7 @@ export const galleryEvents: GalleryEvent[] = [
     title: "The Last",
     highlight: "Commit",
     photos: files("TheLastCommit", "The Last Commit '26", [
-      "tlc1.jpg",
+      "tlc1.JPG",
       "tlc3.jpg",
       "tlc4.jpg",
       "tlc5.jpg",
