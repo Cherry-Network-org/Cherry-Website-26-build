@@ -5,6 +5,25 @@ type NameCardProps = {
   member: TeamMember;
 };
 
+function getInitials(name: string): string {
+  const words = name.trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return "?";
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+}
+
+/** Shown in the photo banner until a real headshot is added — keeps the
+ *  card looking intentional instead of a blank/broken box. */
+function PhotoPlaceholder({ name }: { name: string }) {
+  return (
+    <div className="absolute inset-0 flex items-center justify-center bg-[linear-gradient(160deg,#2a2a2a_0%,#40081a_100%)]">
+      <span className="font-[family-name:var(--font-rubik-mono)] text-2xl text-white/25 sm:text-4xl">
+        {getInitials(name)}
+      </span>
+    </div>
+  );
+}
+
 /** Dynamic card — natural portrait aspect ratio, no fixed height, no side gaps.
  *  Used for Founders and Mentors where photos vary in size. */
 export function DynamicNameCard({
@@ -21,7 +40,7 @@ export function DynamicNameCard({
         <div className="flip-card-front flex flex-col overflow-hidden rounded-xl bg-[#d9d9d9] shadow-lg sm:rounded-[26px]">
           {/* Banner area — image fits naturally */}
           <div className="relative h-[125px] w-full overflow-hidden bg-[#111] sm:h-[165px]">
-            {member.image && (
+            {member.image ? (
               <Image
                 src={member.image}
                 alt={member.name}
@@ -30,6 +49,8 @@ export function DynamicNameCard({
                 style={{ objectPosition: member.imagePosition ?? "top" }}
                 sizes="(max-width: 640px) 45vw, 300px"
               />
+            ) : (
+              <PhotoPlaceholder name={member.name} />
             )}
           </div>
 
@@ -80,7 +101,7 @@ export function NameCard({ member }: NameCardProps) {
         <div className="flip-card-front flex flex-col overflow-hidden rounded-xl bg-[#d9d9d9] shadow-lg sm:rounded-[30px]">
           {/* Banner area — image fits naturally */}
           <div className="relative h-[130px] w-full overflow-hidden bg-[#111] sm:h-[172px]">
-            {member.image && (
+            {member.image ? (
               <Image
                 src={member.image}
                 alt={member.name}
@@ -89,6 +110,8 @@ export function NameCard({ member }: NameCardProps) {
                 style={{ objectPosition: member.imagePosition ?? "top" }}
                 sizes="(max-width: 640px) 45vw, 342px"
               />
+            ) : (
+              <PhotoPlaceholder name={member.name} />
             )}
           </div>
 
