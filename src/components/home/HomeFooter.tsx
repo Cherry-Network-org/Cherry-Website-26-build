@@ -10,10 +10,10 @@ const socialLinks = [
 export function HomeFooter() {
   return (
     <footer className="relative z-10 border-t-[5px] border-[#fc0162] bg-[#0b0b0d] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_auto_1fr] lg:items-center">
-          <div>
-            <p className="max-w-md font-[family-name:var(--font-poppins)] text-sm leading-7 text-[#dedede]">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+        <div className="grid gap-10 text-center lg:grid-cols-[1.1fr_auto_1fr] lg:items-center lg:text-left">
+          <div className="order-2 lg:order-1">
+            <p className="mx-auto max-w-md font-[family-name:var(--font-poppins)] text-sm leading-7 text-[#dedede] lg:mx-0">
               Team up with Cherry+ Network, the coolest club on campus, where we
               discover the secret to success and pave the way for your dreams
               through networking events, workshops, industry partnerships and
@@ -21,40 +21,44 @@ export function HomeFooter() {
             </p>
           </div>
 
-          <div className="justify-self-center">
-            <Link href="/" className="relative block h-20 w-[220px]">
+          <div className="order-1 justify-self-center lg:order-2">
+            <Link
+              href="/"
+              className="group relative block h-24 w-24 transition-transform duration-300 ease-out hover:scale-110 hover:-rotate-3 active:scale-95"
+              aria-label="Cherry+ Network home"
+            >
+              <span className="absolute inset-0 -z-10 rounded-full bg-[#fc0162]/20 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100" />
               <Image
-                src="/images/brand/logo-full.png"
+                src="/images/brand/logo-mark.png"
                 alt="Cherry+ Network"
                 fill
+                sizes="96px"
                 className="object-contain"
               />
             </Link>
           </div>
 
-          <div className="justify-self-end text-left lg:text-right">
-            <div className="space-y-2 font-[family-name:var(--font-poppins)] text-sm font-semibold text-white sm:text-base">
-              <p>
-                <a href="tel:+919778154742" className="transition-colors hover:text-[#fc0162]">
-                  +91 97781 54742
-                </a>
-              </p>
-              <p>
-                <a href="mailto:techverse@cherrynetwork.in" className="transition-colors hover:text-[#fc0162]">
-                  techverse@cherrynetwork.in
-                </a>
-              </p>
-              <p>
-                <a href="https://www.cherrynetwork.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#fc0162]">
-                  www.cherrynetwork.in
-                </a>
-              </p>
-            </div>
+          <div className="order-3 flex flex-col items-center gap-2 font-[family-name:var(--font-poppins)] text-sm font-semibold text-white sm:text-base lg:items-end">
+            <p>
+              <a href="tel:+918826022445" className="transition-colors hover:text-[#fc0162]">
+                +91 88260 22445
+              </a>
+            </p>
+            <p>
+              <a href="mailto:techverse@cherrynetwork.in" className="transition-colors hover:text-[#fc0162]">
+                techverse@cherrynetwork.in
+              </a>
+            </p>
+            <p>
+              <a href="https://www.cherrynetwork.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#fc0162]">
+                www.cherrynetwork.in
+              </a>
+            </p>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col items-center gap-5 border-t border-white/15 pt-8">
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4 sm:gap-5">
             <span className="hidden h-px w-14 bg-white/20 sm:block" />
             {socialLinks.map((item) => (
               <SocialBadge key={item.label} href={item.href} label={item.label} />
@@ -77,7 +81,7 @@ function SocialBadge({ href, label }: { href: string; label: string }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-[#fc0162] hover:text-[#fc0162]"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-200 hover:-translate-y-1 hover:border-[#fc0162] hover:bg-[#fc0162]/10 hover:text-[#fc0162] active:translate-y-0 active:scale-90"
     >
       {label === "Instagram" ? <InstagramIcon /> : null}
       {label === "X" ? <XIcon /> : null}
@@ -96,8 +100,8 @@ function InstagramIcon() {
 
 function XIcon() {
   return (
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
-      <path d="M4 4 20 20M20 4 4 20" stroke="currentColor" strokeWidth="2.4" />
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 4.35-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l12.966 15.644Z" />
     </svg>
   );
 }

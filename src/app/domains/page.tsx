@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DomainPageContent } from "@/components/domains/DomainPageContent";
+import { DomainHubContent } from "@/components/domains/DomainHubContent";
 
 export const metadata: Metadata = {
   title: "Domains | Cherry+ Network",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function DomainsPage() {
-  return <DomainPageContent />;
+  return <DomainHubContent />;
 }

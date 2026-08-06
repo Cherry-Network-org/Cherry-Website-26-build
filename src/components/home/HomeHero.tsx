@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SmokeLayer } from "@/components/SmokeLayer";
+import { PinkEyebrow } from "@/components/PinkEyebrow";
 import { heroMarqueeItems } from "@/data/homepage";
 
 const HERO_TITLE_SRC = "/images/home/hero-title.svg";
@@ -50,18 +50,29 @@ export function HomeHero() {
         </div>
 
         {/* Hero Title & CTAs */}
-        <div className="relative mx-auto mt-8 max-w-7xl text-center sm:mt-12">
-          {/* Bold, expanded logo with further increased vertical length */}
-          <div className="relative mx-auto my-6 w-full max-w-[1300px] px-2 sm:my-12 sm:px-4">
-            <img
-              src={HERO_TITLE_SRC}
-              alt="Cherry+ Network"
-              className="mx-auto h-auto w-full scale-y-[1.65] scale-x-[1.10] object-contain sm:scale-y-[1.80] sm:scale-x-[1.15]"
+        <div className="relative mx-auto mt-14 max-w-7xl text-center sm:mt-20">
+          {/* Bold, expanded logo — animated + reacts to hover for a livelier hero */}
+          <div className="hero-logo-stage group relative mx-auto my-6 w-full max-w-[1300px] px-2 sm:my-12 sm:px-4">
+            <span
+              className="hero-logo-glow pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[60%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fc0162]/25 blur-[70px]"
+              aria-hidden
             />
+            <div className="mx-auto w-full origin-center scale-y-[1.65] scale-x-[1.10] transition-transform duration-500 ease-out group-hover:scale-y-[1.7] group-hover:scale-x-[1.13] sm:scale-y-[1.80] sm:scale-x-[1.15] sm:group-hover:scale-y-[1.85] sm:group-hover:scale-x-[1.18]">
+              <img
+                src={HERO_TITLE_SRC}
+                alt="Cherry+ Network"
+                className="hero-logo-float mx-auto h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* What are we */}
+          <div className="mx-auto mt-6 flex justify-center sm:mt-8">
+            <PinkEyebrow label="What are we?" />
           </div>
 
           {/* Expanded Tagline */}
-          <p className="mx-auto mt-8 max-w-[720px] font-[family-name:var(--font-manrope)] text-base font-medium leading-relaxed text-[#dedede] sm:text-lg sm:leading-relaxed">
+          <p className="mx-auto mt-4 max-w-[720px] font-[family-name:var(--font-manrope)] text-base font-medium leading-relaxed text-[#dedede] sm:text-lg sm:leading-relaxed">
             &quot;The Coolest Club on Campus&quot; — that is the tagline we are
             associated with. We put in the effort to live up to that tagline by
             offering adventures, learning experiences, and skill enhancement to

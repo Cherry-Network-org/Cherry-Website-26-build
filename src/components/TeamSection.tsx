@@ -34,7 +34,7 @@ function TeamRow({
 
   if (useCenteredFlex) {
     return (
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
         {members.map(renderCard)}
       </div>
     );
@@ -42,10 +42,8 @@ function TeamRow({
 
   return (
     <div
-      className={`mx-auto grid w-full gap-6 ${
-        columns === 3
-          ? "max-w-[1100px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          : "max-w-[720px] grid-cols-1 sm:grid-cols-2"
+      className={`mx-auto grid w-full grid-cols-2 gap-3 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:mx-auto [&>*:last-child:nth-child(odd)]:w-1/2 sm:gap-6 lg:[&>*:last-child:nth-child(odd)]:col-span-1 lg:[&>*:last-child:nth-child(odd)]:w-full ${
+        columns === 3 ? "max-w-[1100px] lg:grid-cols-3" : "max-w-[720px]"
       }`}
     >
       {members.map(renderCard)}

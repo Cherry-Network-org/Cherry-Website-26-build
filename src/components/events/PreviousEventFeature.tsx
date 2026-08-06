@@ -16,13 +16,13 @@ export function PreviousEventFeature({
       id={event.id}
       className={`grid gap-6 lg:grid-cols-[minmax(0,440px)_minmax(0,1fr)] lg:items-center ${reverse ? "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1" : ""}`}
     >
-      <div className="relative overflow-hidden border-[3px] border-black bg-white">
+      <div className="group relative overflow-hidden border-[3px] border-black bg-white">
         <Image
           src={event.imageSrc}
           alt={event.imageAlt}
           width={900}
           height={900}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 

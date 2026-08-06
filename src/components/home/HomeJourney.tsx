@@ -19,7 +19,7 @@ export function HomeJourney() {
             <ScrollReveal
               key={item.year}
               delay={index * 100}
-              className="border border-[#fc0162] bg-[#111111]/90 p-5 shadow-[8px_8px_0_0_rgba(252,1,98,0.15)]"
+              className="border border-[#fc0162] bg-[#111111]/90 p-5 shadow-[8px_8px_0_0_rgba(252,1,98,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[10px_10px_0_0_rgba(252,1,98,0.28)]"
             >
               <div className="flex items-center justify-between gap-4">
                 <span className="inline-flex rounded-full border border-white/20 bg-white/5 px-3 py-1 font-[family-name:var(--font-inter)] text-[11px] font-black uppercase tracking-[0.26em] text-white">

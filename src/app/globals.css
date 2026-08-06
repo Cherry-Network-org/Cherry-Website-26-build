@@ -61,7 +61,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-style: preserve-3d;
 }
 
@@ -249,5 +249,132 @@ body {
   50% {
     transform: scaleX(-1) translateY(-14px) scale(1.06);
     opacity: 0.82;
+  }
+}
+
+/* ── Hero logo: gentle idle float + pulsing glow, livens up on hover ─────── */
+.hero-logo-stage {
+  perspective: 900px;
+}
+
+.hero-logo-float {
+  animation: hero-logo-bob 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-logo-stage:hover .hero-logo-float {
+  animation-play-state: paused;
+}
+
+.hero-logo-glow {
+  animation: hero-logo-pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes hero-logo-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-0.6deg);
+  }
+}
+
+@keyframes hero-logo-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-float,
+  .hero-logo-glow,
+  .home-marquee-track,
+  .hero-smoke-wisp,
+  .ambient-smoke-wisp {
+    animation: none !important;
+  }
+}
+
+/* ── Playful shared interaction utilities ─────────────────────────────────── */
+.press-feedback {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.press-feedback:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+/* ── Segmented switch: bouncy sliding thumb (team filter) ─────────────────── */
+.segment-thumb {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .segment-thumb {
+    transition: none;
+  }
+}
+
+.shine-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-sweep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -75%;
+  width: 40%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
+
+.shine-sweep:hover::after {
+  left: 130%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-sweep::after {
+    display: none;
+  }
+}
+
+/* ── Mobile nav dropdown: quick slide/fade instead of an instant snap ────── */
+.nav-mobile-in {
+  animation: nav-mobile-in 0.22s ease-out both;
+}
+
+.nav-mobile-link {
+  animation: nav-mobile-in 0.25s ease-out both;
+}
+
+@keyframes nav-mobile-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-mobile-in,
+  .nav-mobile-link {
+    animation: none;
   }
 }

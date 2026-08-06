@@ -54,7 +54,7 @@ export function GalleryHero() {
           type="button"
           aria-label="Previous slide"
           onClick={() => goTo(activeSlide - 1)}
-          className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#dc143c] text-white transition hover:bg-[#b81032] sm:left-6 sm:h-12 sm:w-12"
+          className="press-feedback absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#dc143c] text-white transition hover:scale-110 hover:bg-[#b81032] sm:left-6 sm:h-12 sm:w-12"
         >
           <ChevronIcon direction="left" />
         </button>
@@ -63,7 +63,7 @@ export function GalleryHero() {
           type="button"
           aria-label="Next slide"
           onClick={() => goTo(activeSlide + 1)}
-          className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#dc143c] text-white transition hover:bg-[#b81032] sm:right-6 sm:h-12 sm:w-12"
+          className="press-feedback absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[#dc143c] text-white transition hover:scale-110 hover:bg-[#b81032] sm:right-6 sm:h-12 sm:w-12"
         >
           <ChevronIcon direction="right" />
         </button>
@@ -75,10 +75,10 @@ export function GalleryHero() {
               type="button"
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => goTo(index)}
-              className={`h-2.5 w-2.5 rounded-full transition ${
+              className={`h-2.5 rounded-full transition-all duration-300 hover:scale-125 ${
                 index === activeSlide
-                  ? "bg-[#dc143c]"
-                  : "bg-[#0b0b0b] ring-1 ring-[#dedede]/40"
+                  ? "w-6 bg-[#dc143c]"
+                  : "w-2.5 bg-[#0b0b0b] ring-1 ring-[#dedede]/40"
               }`}
             />
           ))}

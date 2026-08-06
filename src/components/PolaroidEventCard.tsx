@@ -27,7 +27,7 @@ export function PolaroidEventCard({
 
   return (
     <article
-      className={`relative border-[3px] border-[#fc0162] bg-white p-3 shadow-[8px_8px_0_0_rgba(252,1,98,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[12px_12px_0_0_rgba(252,1,98,0.28)] ${tiltClass} ${className}`.trim()}
+      className={`press-feedback relative border-[3px] border-[#fc0162] bg-white p-3 shadow-[8px_8px_0_0_rgba(252,1,98,0.18)] transition-transform duration-300 hover:-translate-y-1 hover:rotate-0 hover:shadow-[12px_12px_0_0_rgba(252,1,98,0.28)] ${tiltClass} ${className}`.trim()}
     >
       <span className="absolute left-1/2 top-0 h-4 w-16 -translate-x-1/2 -translate-y-1/2 rotate-[-12deg] bg-[#d8c59d] shadow-[0_3px_0_0_rgba(0,0,0,0.3)]" />
       <div className="border-[5px] border-black bg-[url('/images/textures/red-stripes.png')] bg-cover bg-center px-5 py-6">

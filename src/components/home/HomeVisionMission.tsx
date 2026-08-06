@@ -17,7 +17,7 @@ export function HomeVisionMission() {
             <ScrollReveal
               key={card.title}
               delay={index * 120}
-              className={`relative border-[3px] border-[#fc0139] bg-[#0b0b0b] p-4 shadow-[10px_10px_0_0_rgba(0,0,0,0.35)] ${index === 0 ? "lg:-rotate-2" : "lg:rotate-2"}`}
+              className={`relative border-[3px] border-[#fc0139] bg-[#0b0b0b] p-4 shadow-[10px_10px_0_0_rgba(0,0,0,0.35)] transition-transform duration-300 hover:!rotate-0 hover:-translate-y-1 ${index === 0 ? "lg:-rotate-2" : "lg:rotate-2"}`}
             >
               <span className="absolute left-1/2 top-0 h-4 w-24 -translate-x-1/2 -translate-y-1/2 rotate-[-10deg] bg-[#e9d8a6] shadow-[0_4px_0_0_rgba(0,0,0,0.28)]" />
               <div className="border-[5px] border-black bg-[url('/images/textures/red-stripes.png')] bg-cover bg-center p-8">

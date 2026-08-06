@@ -51,3 +51,48 @@ export const endeavourDomains = [
 ];
 
 export type DomainItem = (typeof techverseDomains)[number];
+
+// ─── Domain groups — shared source for the /domains hub + the two detail
+//     pages (/domains/techverse, /domains/endeavour) ────────────────────────
+
+export type DomainGroupId = "techverse" | "endeavour";
+
+export type DomainGroup = {
+  id: DomainGroupId;
+  title: string;
+  tagline: string;
+  description: string;
+  posterSrc: string;
+  posterAlt: string;
+  accent: "blue" | "gold";
+  items: typeof techverseDomains;
+};
+
+export const domainGroups: DomainGroup[] = [
+  {
+    id: "techverse",
+    title: "TECHVERSE",
+    tagline: "Technology-led",
+    description:
+      "Ignite your technical prowess! Showcase skills, explore tech fields, and join a community of techies. Build, innovate, and learn alongside like-minded enthusiasts.",
+    posterSrc: "/images/universes/techverse-card.png",
+    posterAlt: "Techverse comic poster",
+    accent: "blue",
+    items: techverseDomains,
+  },
+  {
+    id: "endeavour",
+    title: "ENDEAVOUR",
+    tagline: "Leadership-led",
+    description:
+      "Endeavour is the heart of Cherry+ Network, helping members lead, create, execute, and grow through real experiences that move ideas into action.",
+    posterSrc: "/images/universes/endeavour-card.png",
+    posterAlt: "Endeavour comic poster",
+    accent: "gold",
+    items: endeavourDomains,
+  },
+];
+
+export function getDomainGroup(id: string): DomainGroup | undefined {
+  return domainGroups.find((group) => group.id === id);
+}

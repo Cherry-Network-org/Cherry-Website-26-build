@@ -1,8 +1,8 @@
-import { CommunityCTA } from "@/components/CommunityCTA";
 import { Footer } from "@/components/Footer";
 import { GalleryHero } from "@/components/GalleryHero";
 import { GallerySection } from "@/components/GallerySection";
 import { NavBar } from "@/components/NavBar";
+import { HomeCommunityCta } from "@/components/home/HomeCommunityCta";
 import { galleryEvents } from "@/data/gallery";
 
 export function GalleryPageContent() {
@@ -20,7 +20,7 @@ export function GalleryPageContent() {
         </div>
       </div>
 
-      <CommunityCTA />
+      <HomeCommunityCta />
       <Footer />
     </main>
   );

@@ -37,9 +37,9 @@ export function HomePillars() {
               <ScrollReveal
                 key={pillar.id}
                 delay={index * 120}
-                className="grid gap-5 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-stretch"
+                className="group grid gap-5 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-stretch"
               >
-                <div className="relative overflow-hidden border-[3px] border-black bg-white">
+                <div className="relative overflow-hidden border-[3px] border-black bg-white transition-transform duration-300 group-hover:-translate-y-1">
                   <div className="absolute inset-x-0 top-4 z-10 flex items-center justify-between bg-white/95 px-3 py-2 font-[family-name:var(--font-inter)] text-[10px] font-black uppercase tracking-[0.24em] text-black sm:px-4">
                     <span>1. All-New Collection</span>
                     <span className="border border-black px-2 py-1 text-[9px]">Approved</span>
@@ -49,11 +49,11 @@ export function HomePillars() {
                     alt={pillar.posterAlt}
                     width={860}
                     height={1080}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
-                <div className={`border-[3px] p-5 sm:p-7 ${panelClasses}`}>
+                <div className={`border-[3px] p-5 transition-transform duration-300 group-hover:-translate-y-1 sm:p-7 ${panelClasses}`}>
                   <div
                     className={`inline-flex px-3 py-1 font-[family-name:var(--font-inter)] text-[10px] font-black uppercase tracking-[0.22em] ${bannerClasses}`}
                   >

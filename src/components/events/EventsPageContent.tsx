@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
 import { PinkEyebrow } from "@/components/PinkEyebrow";
 import { ScrollReveal } from "@/components/ScrollReveal";

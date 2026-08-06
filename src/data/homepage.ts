@@ -1,8 +1,8 @@
 import { endeavourDomains, techverseDomains } from "@/data/domains";
 export const heroMarqueeItems = [
   "upcoming events",
-  "ataraxia 2.0",
   "robofest '25",
+  "ataraxia 2.0",
   "the last commit '26",
 ];
 
@@ -54,7 +54,7 @@ export const pillarSections = [
     tags: techverseDomains.map((domain) => domain.title),
     primaryHref: "/join",
     primaryLabel: "Join Techverse",
-    secondaryHref: "/domains#techverse",
+    secondaryHref: "/domains/techverse",
     secondaryLabel: "Learn More",
   },
   {
@@ -68,19 +68,19 @@ export const pillarSections = [
     tags: endeavourDomains.map((domain) => domain.title),
     primaryHref: "/join",
     primaryLabel: "Join Endeavour",
-    secondaryHref: "/domains#endeavour",
+    secondaryHref: "/domains/endeavour",
     secondaryLabel: "Learn More",
   },
 ];
 
 export const activityCards = [
   {
-    category: "Flagship",
-    title: "Ataraxia 2.0",
-    date: "11 - 14 February 2026",
-    location: "Main Campus Grounds",
+    category: "Creative Tech",
+    title: "Elysian '25",
+    date: "7 August 2025",
+    location: "Auditorium & Innovation Hub",
     blurb:
-      "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
+      "Techverse creative showcase combining interactive media, design storytelling, and student talent under one roof.",
   },
   {
     category: "Robotics & Tech",
@@ -99,12 +99,12 @@ export const activityCards = [
       "An unforgettable DJ night wrapping up Robofest with massive music production, lights, and non-stop campus energy.",
   },
   {
-    category: "Creative Tech",
-    title: "Elysian '25",
-    date: "7 August 2025",
-    location: "Auditorium & Innovation Hub",
+    category: "Flagship",
+    title: "Ataraxia 2.0",
+    date: "11 - 14 February 2026",
+    location: "Main Campus Grounds",
     blurb:
-      "Techverse creative showcase combining interactive media, design storytelling, and student talent under one roof.",
+      "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
   },
   {
     category: "Community Outreach",

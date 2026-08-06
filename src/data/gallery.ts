@@ -51,6 +51,33 @@ export const galleryCarouselSlides = [
 
 export const galleryEvents: GalleryEvent[] = [
   {
+    id: "elysian-25",
+    date: "7th August 2025",
+    title: "Elysian",
+    highlight: "'25",
+    photos: files("Elysian", "Elysian '25", [
+      "el1.jpg",
+      "el2.jpg",
+      "el3.jpg",
+      "el4.jpg",
+      "el5.jpg",
+      "el6.jpg",
+    ]),
+  },
+  {
+    id: "robofest",
+    date: "10th - 11th September 2025",
+    title: "Robofest",
+    highlight: "'25 & DJ Night",
+    photos: files("AppArchives/Foreword", "Robofest '25", [
+      "for1.jpg",
+      "for2.jpg",
+      "for3.jpg",
+      "for4.jpg",
+      "for5.jpg",
+    ]),
+  },
+  {
     id: "ataraxia-20",
     date: "11th - 14th February 2026",
     title: "Ataraxia",
@@ -66,19 +93,6 @@ export const galleryEvents: GalleryEvent[] = [
       "at8.jpg",
       "at9.jpg",
       "at10.jpg",
-    ]),
-  },
-  {
-    id: "the-last-commit",
-    date: "23rd April 2026",
-    title: "The Last",
-    highlight: "Commit",
-    photos: files("TheLastCommit", "The Last Commit '26", [
-      "tlc1.jpg",
-      "tlc2.jpg",
-      "tlc3.jpg",
-      "tlc4.jpg",
-      "tlc5.jpg",
     ]),
   },
   {
@@ -98,30 +112,16 @@ export const galleryEvents: GalleryEvent[] = [
     ]),
   },
   {
-    id: "robofest",
-    date: "10th - 11th September 2025",
-    title: "Robofest",
-    highlight: "'25 & DJ Night",
-    photos: files("AppArchives/Foreword", "Robofest '25", [
-      "for1.jpg",
-      "for2.jpg",
-      "for3.jpg",
-      "for4.jpg",
-      "for5.jpg",
-    ]),
-  },
-  {
-    id: "elysian-25",
-    date: "7th August 2025",
-    title: "Elysian",
-    highlight: "'25",
-    photos: files("Elysian", "Elysian '25", [
-      "el1.jpg",
-      "el2.jpg",
-      "el3.jpg",
-      "el4.jpg",
-      "el5.jpg",
-      "el6.jpg",
+    id: "the-last-commit",
+    date: "23rd April 2026",
+    title: "The Last",
+    highlight: "Commit",
+    photos: files("TheLastCommit", "The Last Commit '26", [
+      "tlc1.jpg",
+      "tlc2.jpg",
+      "tlc3.jpg",
+      "tlc4.jpg",
+      "tlc5.jpg",
     ]),
   },
 ];

@@ -28,14 +28,14 @@ export type PreviousEventGroup = {
 
 export const featuredEvents: FeaturedEvent[] = [
   {
-    id: "ataraxia-20",
-    category: "Flagship",
-    title: "Ataraxia 2.0",
-    date: "11 - 14 February 2026",
-    time: "Full Day Campus Event",
-    location: "Main Campus Grounds",
+    id: "elysian-25",
+    category: "Creative Tech",
+    title: "Elysian '25",
+    date: "7 August 2025",
+    time: "2:00 pm - 7:00 pm",
+    location: "Auditorium & Innovation Hub",
     blurb:
-      "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
+      "Techverse creative showcase combining interactive media, design storytelling, and student talent under one roof.",
   },
   {
     id: "robofest-25",
@@ -58,14 +58,14 @@ export const featuredEvents: FeaturedEvent[] = [
       "An unforgettable DJ night wrapping up Robofest with massive music production, lights, and non-stop campus energy.",
   },
   {
-    id: "elysian-25",
-    category: "Creative Tech",
-    title: "Elysian '25",
-    date: "7 August 2025",
-    time: "2:00 pm - 7:00 pm",
-    location: "Auditorium & Innovation Hub",
+    id: "ataraxia-20",
+    category: "Flagship",
+    title: "Ataraxia 2.0",
+    date: "11 - 14 February 2026",
+    time: "Full Day Campus Event",
+    location: "Main Campus Grounds",
     blurb:
-      "Techverse creative showcase combining interactive media, design storytelling, and student talent under one roof.",
+      "A flagship multi-day festival featuring music, performances, RedBull stage activations, digicam reels, and energetic crowd moments.",
   },
   {
     id: "orphanage-drive-26",
@@ -90,25 +90,6 @@ export const featuredEvents: FeaturedEvent[] = [
 ];
 
 export const previousEventGroups: PreviousEventGroup[] = [
-  {
-    id: "techverse",
-    title: "TECHVERSE",
-    intro:
-      "Techverse is our technical domain focused on software development, hackathons, building, and engineering innovation.",
-    events: [
-      {
-        id: "the-last-commit-26",
-        date: "23 April 2026",
-        title: "The Last Commit",
-        highlight: "'26",
-        description:
-          "The grand finale hackathon celebrating project builds, developer handovers, and technical milestones of the tenure.",
-        imageSrc: "/images/events/The Last Commit.png",
-        imageAlt: "The Last Commit '26 hackathon poster",
-        galleryHref: "/gallery#the-last-commit",
-      },
-    ],
-  },
   {
     id: "endeavour",
     title: "ENDEAVOUR",
@@ -169,6 +150,25 @@ export const previousEventGroups: PreviousEventGroup[] = [
         imageSrc: "/images/events/Orphanage-Drive.png",
         imageAlt: "Orphanage Drive '26 event photo",
         galleryHref: "/gallery#orphanage-visit",
+      },
+    ],
+  },
+  {
+    id: "techverse",
+    title: "TECHVERSE",
+    intro:
+      "Techverse is our technical domain focused on software development, hackathons, building, and engineering innovation.",
+    events: [
+      {
+        id: "the-last-commit-26",
+        date: "23 April 2026",
+        title: "The Last Commit",
+        highlight: "'26",
+        description:
+          "The grand finale hackathon celebrating project builds, developer handovers, and technical milestones of the tenure.",
+        imageSrc: "/images/events/The Last Commit.png",
+        imageAlt: "The Last Commit '26 hackathon poster",
+        galleryHref: "/gallery#the-last-commit",
       },
     ],
   },

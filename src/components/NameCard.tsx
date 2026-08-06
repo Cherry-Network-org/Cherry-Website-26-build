@@ -12,19 +12,23 @@ export function DynamicNameCard({
   showSocials = true,
 }: NameCardProps & { showSocials?: boolean }) {
   return (
-    <div className="flip-card mx-auto h-[255px] w-full max-w-[300px]" tabIndex={0}>
+    <div
+      className="flip-card mx-auto h-[210px] w-full max-w-[300px] transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 sm:h-[255px]"
+      tabIndex={0}
+    >
       <div className="flip-card-inner">
         {/* ── FRONT ─────────────────────────────────────────────────────── */}
-        <div className="flip-card-front flex flex-col overflow-hidden rounded-[26px] bg-[#d9d9d9] shadow-lg">
+        <div className="flip-card-front flex flex-col overflow-hidden rounded-xl bg-[#d9d9d9] shadow-lg sm:rounded-[26px]">
           {/* Banner area — image fits naturally */}
-          <div className="relative h-[165px] w-full overflow-hidden bg-[#111]">
+          <div className="relative h-[125px] w-full overflow-hidden bg-[#111] sm:h-[165px]">
             {member.image && (
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                className={`object-cover object-${member.imagePosition ?? "top"}`}
-                sizes="300px"
+                className="object-cover"
+                style={{ objectPosition: member.imagePosition ?? "top" }}
+                sizes="(max-width: 640px) 45vw, 300px"
               />
             )}
           </div>
@@ -33,20 +37,20 @@ export function DynamicNameCard({
           <div className="h-[3px] w-full bg-[#dc143c]" />
 
           {/* Bottom name / role strip */}
-          <div className="flex flex-1 flex-col justify-center bg-[#d9d9d9] px-3 py-2 text-center">
-            <h3 className="font-[family-name:var(--font-inter)] text-lg font-bold leading-tight text-black sm:text-xl">
+          <div className="flex flex-1 flex-col justify-center bg-[#d9d9d9] px-2 py-1.5 text-center sm:px-3 sm:py-2">
+            <h3 className="font-[family-name:var(--font-inter)] text-xs font-bold leading-tight text-black sm:text-xl">
               {member.name}
             </h3>
-            <p className="mt-0.5 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-wider text-[#dc143c]">
+            <p className="mt-0.5 font-[family-name:var(--font-inter)] text-[9px] font-semibold uppercase tracking-wider text-[#dc143c] sm:text-xs">
               {member.role}
             </p>
           </div>
         </div>
 
         {/* ── BACK ──────────────────────────────────────────────────────── */}
-        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-[26px] bg-[#dc143c] p-4 shadow-lg">
+        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-xl bg-[#dc143c] p-3 shadow-lg sm:rounded-[26px] sm:p-4">
           {showSocials && (
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
                 <LinkedInIcon />
               </SocialIcon>
@@ -56,7 +60,7 @@ export function DynamicNameCard({
             </div>
           )}
 
-          <p className="font-[family-name:var(--font-inter)] text-xs leading-relaxed text-black sm:text-sm">
+          <p className="line-clamp-4 font-[family-name:var(--font-inter)] text-[10px] leading-relaxed text-black sm:text-sm">
             {member.bio}
           </p>
         </div>
@@ -67,19 +71,23 @@ export function DynamicNameCard({
 
 export function NameCard({ member }: NameCardProps) {
   return (
-    <div className="flip-card mx-auto h-[264px] w-full max-w-[342px]" tabIndex={0}>
+    <div
+      className="flip-card mx-auto h-[220px] w-full max-w-[342px] transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 sm:h-[264px]"
+      tabIndex={0}
+    >
       <div className="flip-card-inner">
         {/* ── FRONT ─────────────────────────────────────────────────────── */}
-        <div className="flip-card-front flex flex-col overflow-hidden rounded-[30px] bg-[#d9d9d9] shadow-lg">
+        <div className="flip-card-front flex flex-col overflow-hidden rounded-xl bg-[#d9d9d9] shadow-lg sm:rounded-[30px]">
           {/* Banner area — image fits naturally */}
-          <div className="relative h-[172px] w-full overflow-hidden bg-[#111]">
+          <div className="relative h-[130px] w-full overflow-hidden bg-[#111] sm:h-[172px]">
             {member.image && (
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                className={`object-cover object-${member.imagePosition ?? "top"}`}
-                sizes="342px"
+                className="object-cover"
+                style={{ objectPosition: member.imagePosition ?? "top" }}
+                sizes="(max-width: 640px) 45vw, 342px"
               />
             )}
           </div>
@@ -88,19 +96,19 @@ export function NameCard({ member }: NameCardProps) {
           <div className="h-[3px] w-full bg-[#dc143c]" />
 
           {/* Bottom name / role strip */}
-          <div className="flex flex-1 flex-col justify-center bg-[#d9d9d9] px-4 py-3 text-center">
-            <h3 className="font-[family-name:var(--font-inter)] text-xl font-bold leading-tight text-black sm:text-2xl">
+          <div className="flex flex-1 flex-col justify-center bg-[#d9d9d9] px-2.5 py-2 text-center sm:px-4 sm:py-3">
+            <h3 className="font-[family-name:var(--font-inter)] text-sm font-bold leading-tight text-black sm:text-2xl">
               {member.name}
             </h3>
-            <p className="mt-1 font-[family-name:var(--font-inter)] text-xs font-semibold uppercase tracking-wider text-[#dc143c]">
+            <p className="mt-0.5 font-[family-name:var(--font-inter)] text-[9px] font-semibold uppercase tracking-wider text-[#dc143c] sm:mt-1 sm:text-xs">
               {member.role}
             </p>
           </div>
         </div>
 
         {/* ── BACK ──────────────────────────────────────────────────────── */}
-        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-[30px] bg-[#dc143c] p-5 shadow-lg">
-          <div className="flex items-center gap-3">
+        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-xl bg-[#dc143c] p-3.5 shadow-lg sm:rounded-[30px] sm:p-5">
+          <div className="flex items-center gap-2 sm:gap-3">
             <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
               <LinkedInIcon />
             </SocialIcon>
@@ -109,7 +117,7 @@ export function NameCard({ member }: NameCardProps) {
             </SocialIcon>
           </div>
 
-          <p className="font-[family-name:var(--font-inter)] text-sm leading-relaxed text-black sm:text-base">
+          <p className="line-clamp-4 font-[family-name:var(--font-inter)] text-[11px] leading-relaxed text-black sm:text-base">
             {member.bio}
           </p>
         </div>
@@ -133,7 +141,7 @@ function SocialIcon({
       target={href && href !== "#" ? "_blank" : undefined}
       rel={href && href !== "#" ? "noopener noreferrer" : undefined}
       aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black transition hover:scale-105"
+      className="press-feedback flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-black transition hover:scale-105 sm:h-10 sm:w-10"
     >
       {children}
     </a>
