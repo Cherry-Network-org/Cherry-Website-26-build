@@ -20,6 +20,7 @@ export function HomeHero() {
           src={HERO_HALFTONE_SRC}
           alt=""
           fill
+          sizes="100vw"
           className="object-cover opacity-30"
           priority
         />

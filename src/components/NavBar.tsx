@@ -38,6 +38,7 @@ export function NavBar({ activeLabel }: NavBarProps) {
             src="/images/brand/logo-full.png"
             alt="Cherry+ Network"
             fill
+            sizes="(min-width: 640px) 225px, 185px"
             className="object-contain object-left"
             priority
           />
