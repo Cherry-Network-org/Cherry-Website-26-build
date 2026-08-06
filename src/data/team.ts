@@ -200,8 +200,8 @@ export const teamSections: TeamSection[] = [
           bio: "Leading the technical vision and driving innovation across the engineering teams.",
           image: "/images/execs/Tech EXEC Tejas Sharma.jpg",
           domain: "techverse",
-          Linkedin: "https://github.com/TejasSharma356",
-          Github: "https://www.linkedin.com/in/tejassharmaaa/",
+          Linkedin: "https://www.linkedin.com/in/tejassharmaaa/",
+          Github: "https://github.com/TejasSharma356",
         },
         {
           id: "e2",
@@ -294,7 +294,7 @@ export const teamSections: TeamSection[] = [
       [
         {
           id: "mg2",
-          name: "Web Dev Managers",
+          name: "Development Managers",
           role: "Web Dev Managers",
           bio: "Steering the Web Dev team in crafting fast, accessible, and visually polished web experiences. They set technical standards, mentor their peers, and ensure every line of code ships with purpose.",
           image: "/images/managers/Tech.JPG",
