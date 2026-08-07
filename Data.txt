@@ -1,156 +1,62 @@
-
-Corporate 
-1. Tanishqa Sharma
-- Linked in link- linkedin.com/in/tanishqa-sharma-7293a7349
-- github link- https://github.com/Tanishqa57
-- PR associate
-
-
-
-2. Krishav Dutta
-https://github.com/KillerkingKD2112
-https://www.linkedin.com/in/krishav-dutta-0b5a65372/
-PR Associate
-
-3. Renisha Rana
-Linkedin
-Github
-PR Manager 
-
-
-Events
- 
-Kritarth Sharan 
-https://www.linkedin.com/in/kritarthsharan2511
-https://github.com/Krxtrate
-Events Manager
-
-
-Akash Garai
-https://github.com/Akashgarai
-https://www.linkedin.com/in/akash-garai-43a858375/
-Events Associate  
-
-3. Tanvi Malik
-https://in.linkedin.com/in/tanvi-malik-4b2766375
-Events Associate
-
-4. Mukhesh A K 
-https://www.linkedin.com/in/a-k-mukhesh-77a25040b?utm_source=share_via&utm_content=profile&utm_medium=member_android
-Events Associate 
-        
-       
-       5. Reeju Banerjee
-	https://www.linkedin.com/in/reejubanerjee/
-	https://github.com/ReejuBanerjee
-	Events Associate
-
-
- 6. Nimrat Kaur Maan
-          https://www.linkedin.com/in/nimrat-maan-18a1b8379?utm_source=share_via&utm_content=profile&utm_medium=member_android
-Events Associate
-
-
-
-
-
-Design 
-
-
-Aarav Goel
-https://github.com/coderaarav12/ 
-https://www.linkedin.com/in/aaravgoel12/ 
-Design Manager
-
-Anugya 
-	
-	
-	Design Manager
-
-Manthan  
-
-
-Design Associate
-
-Piyush
-https://github.com/int01001
-
-linkedin.com/in/piyush-kumar-556aba33b/
-
-Design Associate
-
-Ronik
-
-Design Associate
-
-Tech Domain :
-
-Daksh Kothari 
-
-https://github.com/daksh7kothari 
-https://www.linkedin.com/in/daksh7kothari 
-Manager (Webdev)
-
-Archit Sahoo
-
-https://github.com/4rch1t 
-https://www.linkedin.com/in/architkumarsahoo/
-Web Dev Manager
-
-
-Aditya Arul Manalan 
-
-https://github.com/adityaarulmanalan
-https://www.linkedin.com/in/adityaarulmanalan/
-UIUX Manager 
-
-
-
-
-Ahana Chakraborty
-
-https://github.com/Ahana-333
-https://www.linkedin.com/in/ahana-chakraborty-982a54325\ 
-App Dev Manager
-
-
-5. Rohan A M 
-
-https://github.com/RohanAM6606?tab=repositories
-https://www.linkedin.com/in/rohan-a-m-0382a2324/
-Web Dev (Associate)
-
-
-
-6. Ammoditaa Kandpal
-
-https://github.com/Ammoditaa123
-https://www.linkedin.com/in/ammoditaa-kandpal-a63588372/
-App Dev (Associate)
-
-
-
-7. Yuvraj Singh 
-https://www.linkedin.com/in/csyuvraj?utm_source=share_via&utm_content=profile&utm_medium=member_android
-
-https://github.com/csyuvraj
-Web Dev (Associate)
-
-8. Sreesweta Roy 
-https://github.com/Swezz
-
-https://www.linkedin.com/in/sreesweta-roy-921012310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-UIUX (Associate)
-
-9. Aryan Kadam
-https://github.com/Aryan-2204 
-https://www.linkedin.com/in/aryan-k-72349021a
-App Dev Associate
-
-
-
-
-
-
-
-
+		
+Directors		
+Atharv Gogia		Executive Director
+Medhansh Shankpal		COO
+		
+		
+Corporate		
+		
+Ayush Dungrakoti	Corporate	Executive
+Mohak Dhawan	Corporate	Executive
+		
+Farhan Sheikh 	Corporate	Manager (PR)
+Renisha Rana	Corporate	Manager (PR)
+Pranit Singh Saluja	Corporate	Manager(HR)
+Teesta Bhattacharya	Corporate	Manager( Sponsorship & Finance)
+		
+Krishav Dutta	Corporate	Associate(PR)
+Tanishqa Sharma	Corporate	Associate(PR)
+Pratyaksh Rana	Corporate	Associate(PR)
+Amulya Srivastava	Corporate	Associate(PR)
+Jignesh Jigar Sareen	Corporate	Associate(PR)
+Gayatri	Corporate	Associate(PR)
+Riddhima Layek	Corporate	Associate(PR)
+Yuvraj Paul	Corporate	Associate(HR)
+Shikhar Shukla	Corporate	Associate(Sponsorship & Finance)
+Zorawar Singh Cheema	Corporate	Associate(Sponsorship & Finance)
+		
+		
+Events		
+		
+Ayan Khan	Events	Executive
+		
+Vrinda Pangasa	Events	Manager
+Kritarth Sharan	Events	Manager
+		
+Kristie Goswami	Events	Associate
+Tanvi Malik	Events	Associate
+Heeva More	Events	Associate
+Mukesh	Events	Associate
+Akash Garai	Events	Associate
+Pranav Ahuja	Events	Associate
+Reeju Banerjee	Events	Associate
+samanthula sri mohith reddy	Events	Associate
+Nimrat Kaur Maan	Events	Associate
+Krithik Sai Reddy 	Events	Associate
+		
+		
+Design		
+		
+Atharv Gogia	Design	Executive Director / Executive
+Bhavika Dutta	Design	Executive
+		
+Aarav Goel	Design	Manager
+Anugya	Design	Manager
+		
+Piyush Kumar	Design	Associate
+Manthan Poonia	Design	Associate
+Khushi Vasa	Design	Associate
+Aashi Goel	Design	Associate
+Ronik Agarwal 	Design	Associate
+		
+		
