@@ -32,14 +32,14 @@ export function DynamicNameCard({
 }: NameCardProps & { showSocials?: boolean }) {
   return (
     <div
-      className="flip-card mx-auto h-[210px] w-full max-w-[300px] transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 sm:h-[255px]"
+      className="flip-card cursor-pointer h-[220px] w-[calc(50%-0.4rem)] max-w-[290px] transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 sm:h-[255px] sm:w-[280px] sm:max-w-[300px]"
       tabIndex={0}
     >
       <div className="flip-card-inner">
         {/* ── FRONT ─────────────────────────────────────────────────────── */}
         <div className="flip-card-front flex flex-col overflow-hidden rounded-xl bg-[#d9d9d9] shadow-lg sm:rounded-[26px]">
           {/* Banner area — image fits naturally */}
-          <div className="relative h-[125px] w-full overflow-hidden bg-[#111] sm:h-[165px]">
+          <div className="relative h-[135px] w-full overflow-hidden bg-[#111] sm:h-[165px]">
             {member.image ? (
               <Image
                 src={member.image}
@@ -59,7 +59,7 @@ export function DynamicNameCard({
 
           {/* Bottom name / role strip */}
           <div className="flex flex-1 flex-col justify-center bg-[#d9d9d9] px-2 py-1.5 text-center sm:px-3 sm:py-2">
-            <h3 className="font-[family-name:var(--font-inter)] text-xs font-bold leading-tight text-black sm:text-xl">
+            <h3 className="font-[family-name:var(--font-inter)] text-xs font-bold leading-tight text-black sm:text-lg lg:text-xl">
               {member.name}
             </h3>
             <p className="mt-0.5 font-[family-name:var(--font-inter)] text-[9px] font-semibold uppercase tracking-wider text-[#dc143c] sm:text-xs">
@@ -69,7 +69,7 @@ export function DynamicNameCard({
         </div>
 
         {/* ── BACK ──────────────────────────────────────────────────────── */}
-        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-xl bg-[#dc143c] p-3 shadow-lg sm:rounded-[26px] sm:p-4">
+        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-xl bg-[#dc143c] p-3 text-left shadow-lg sm:rounded-[26px] sm:p-4">
           {showSocials && (
             <div className="flex items-center gap-2 sm:gap-3">
               <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
@@ -93,14 +93,14 @@ export function DynamicNameCard({
 export function NameCard({ member }: NameCardProps) {
   return (
     <div
-      className="flip-card mx-auto h-[220px] w-full max-w-[342px] transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 sm:h-[264px]"
+      className="flip-card cursor-pointer h-[230px] w-[calc(50%-0.4rem)] max-w-[320px] transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1 sm:h-[264px] sm:w-[300px] sm:max-w-[342px]"
       tabIndex={0}
     >
       <div className="flip-card-inner">
         {/* ── FRONT ─────────────────────────────────────────────────────── */}
         <div className="flip-card-front flex flex-col overflow-hidden rounded-xl bg-[#d9d9d9] shadow-lg sm:rounded-[30px]">
           {/* Banner area — image fits naturally */}
-          <div className="relative h-[130px] w-full overflow-hidden bg-[#111] sm:h-[172px]">
+          <div className="relative h-[140px] w-full overflow-hidden bg-[#111] sm:h-[172px]">
             {member.image ? (
               <Image
                 src={member.image}
@@ -120,7 +120,7 @@ export function NameCard({ member }: NameCardProps) {
 
           {/* Bottom name / role strip */}
           <div className="flex flex-1 flex-col justify-center bg-[#d9d9d9] px-2.5 py-2 text-center sm:px-4 sm:py-3">
-            <h3 className="font-[family-name:var(--font-inter)] text-sm font-bold leading-tight text-black sm:text-2xl">
+            <h3 className="font-[family-name:var(--font-inter)] text-xs font-bold leading-tight text-black sm:text-xl lg:text-2xl">
               {member.name}
             </h3>
             <p className="mt-0.5 font-[family-name:var(--font-inter)] text-[9px] font-semibold uppercase tracking-wider text-[#dc143c] sm:mt-1 sm:text-xs">
@@ -130,7 +130,7 @@ export function NameCard({ member }: NameCardProps) {
         </div>
 
         {/* ── BACK ──────────────────────────────────────────────────────── */}
-        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-xl bg-[#dc143c] p-3.5 shadow-lg sm:rounded-[30px] sm:p-5">
+        <div className="flip-card-back flex flex-col justify-between overflow-hidden rounded-xl bg-[#dc143c] p-3.5 text-left shadow-lg sm:rounded-[30px] sm:p-5">
           <div className="flex items-center gap-2 sm:gap-3">
             <SocialIcon label="LinkedIn" href={member.Linkedin || member.linkedin}>
               <LinkedInIcon />
@@ -140,7 +140,7 @@ export function NameCard({ member }: NameCardProps) {
             </SocialIcon>
           </div>
 
-          <p className="line-clamp-4 font-[family-name:var(--font-inter)] text-[11px] leading-relaxed text-black sm:text-base">
+          <p className="line-clamp-4 font-[family-name:var(--font-inter)] text-[10px] leading-relaxed text-black sm:text-base">
             {member.bio}
           </p>
         </div>
@@ -158,13 +158,21 @@ function SocialIcon({
   href?: string;
   children: React.ReactNode;
 }) {
+  if (!href || href.trim() === "" || href === "#") return null;
+
+  let formattedHref = href.trim();
+  if (!formattedHref.startsWith("http://") && !formattedHref.startsWith("https://")) {
+    formattedHref = `https://${formattedHref}`;
+  }
+
   return (
     <a
-      href={href || "#"}
-      target={href && href !== "#" ? "_blank" : undefined}
-      rel={href && href !== "#" ? "noopener noreferrer" : undefined}
+      href={formattedHref}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
-      className="press-feedback flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-black transition hover:scale-105 sm:h-10 sm:w-10"
+      onClick={(e) => e.stopPropagation()}
+      className="press-feedback flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-black transition hover:scale-110 sm:h-9 sm:w-9"
     >
       {children}
     </a>

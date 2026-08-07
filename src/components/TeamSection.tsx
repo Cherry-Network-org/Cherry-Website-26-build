@@ -21,10 +21,6 @@ function TeamRow({
   cardVariant?: "default" | "dynamic";
   showSocials?: boolean;
 }) {
-  const useCenteredFlex =
-    (columns === 3 && members.length < 3) ||
-    (columns === 2 && members.length < 2);
-
   const renderCard = (member: TeamMember) =>
     cardVariant === "dynamic" ? (
       <DynamicNameCard key={member.id} member={member} showSocials={showSocials} />
@@ -32,18 +28,10 @@ function TeamRow({
       <NameCard key={member.id} member={member} />
     );
 
-  if (useCenteredFlex) {
-    return (
-      <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
-        {members.map(renderCard)}
-      </div>
-    );
-  }
-
   return (
     <div
-      className={`mx-auto grid w-full grid-cols-2 gap-3 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:mx-auto [&>*:last-child:nth-child(odd)]:w-1/2 sm:gap-6 lg:[&>*:last-child:nth-child(odd)]:col-span-1 lg:[&>*:last-child:nth-child(odd)]:w-full ${
-        columns === 3 ? "max-w-[1100px] lg:grid-cols-3" : "max-w-[720px]"
+      className={`mx-auto flex w-full flex-wrap justify-center gap-3.5 sm:gap-6 ${
+        columns === 3 ? "max-w-[1100px]" : "max-w-[720px]"
       }`}
     >
       {members.map(renderCard)}
