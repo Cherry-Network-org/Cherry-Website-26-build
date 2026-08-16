@@ -66,7 +66,7 @@ export function NavBar({ activeLabel }: NavBarProps) {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/join"
+            href="https://recruitments.cherrynetwork.in/"
             className="shine-sweep press-feedback hidden border-[3px] border-[#fc0162] bg-[linear-gradient(180deg,#fc0162_0%,#fc0139_100%)] px-4 py-2 font-[family-name:var(--font-inter)] text-[11px] font-black uppercase tracking-[0.18em] text-white shadow-[6px_6px_0_0_rgba(0,0,0,0.35)] transition-transform duration-200 hover:-translate-y-0.5 sm:inline-flex"
           >
             JOIN NOW
@@ -137,7 +137,7 @@ export function NavBar({ activeLabel }: NavBarProps) {
             </nav>
 
             <Link
-              href="/join"
+              href="https://recruitments.cherrynetwork.in/"
               onClick={() => setOpen(false)}
               className="shine-sweep press-feedback mx-auto mt-8 inline-flex w-full max-w-xs justify-center border-[3px] border-[#fc0162] bg-[linear-gradient(180deg,#fc0162_0%,#fc0139_100%)] px-4 py-3.5 font-[family-name:var(--font-inter)] text-sm font-black uppercase tracking-[0.16em] text-white shadow-[6px_6px_0_0_rgba(0,0,0,0.35)]"
             >
