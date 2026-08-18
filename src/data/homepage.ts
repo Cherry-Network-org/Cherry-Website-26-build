@@ -52,7 +52,7 @@ export const pillarSections = [
     description:
       "Techverse is where our builders, designers, and problem-solvers sharpen their craft together. Members collaborate on projects, workshops, and experiments that turn curiosity into practical skill.",
     tags: techverseDomains.map((domain) => domain.title),
-    primaryHref: "/join",
+    primaryHref: "https://recruitments.cherrynetwork.in/",
     primaryLabel: "Join Techverse",
     secondaryHref: "/domains/techverse",
     secondaryLabel: "Learn More",
@@ -66,7 +66,7 @@ export const pillarSections = [
     description:
       "Endeavour is the engine behind execution, storytelling, and community energy. It is where members learn to lead events, shape experiences, and bring ambitious ideas to life.",
     tags: endeavourDomains.map((domain) => domain.title),
-    primaryHref: "/join",
+    primaryHref: "https://recruitments.cherrynetwork.in/",
     primaryLabel: "Join Endeavour",
     secondaryHref: "/domains/endeavour",
     secondaryLabel: "Learn More",

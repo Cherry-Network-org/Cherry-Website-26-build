@@ -40,7 +40,7 @@ export function HomeCommunityCta() {
 
               {/* Action buttons */}
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <HomeButton href="/join" label="Apply" />
+                <HomeButton href="https://recruitments.cherrynetwork.in/" label="Apply" />
                 <HomeButton href="/team" label="Meet The Team" variant="secondary" />
               </div>
             </div>

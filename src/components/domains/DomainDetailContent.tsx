@@ -74,7 +74,7 @@ export function DomainDetailContent({ group }: DomainDetailContentProps) {
               </p>
 
               <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-                <HomeButton href="/join" label={`Join ${group.title}`} />
+                <HomeButton href="https://recruitments.cherrynetwork.in/" label={`Join ${group.title}`} />
                 {otherGroup ? (
                   <HomeButton
                     href={`/domains/${otherGroup.id}`}

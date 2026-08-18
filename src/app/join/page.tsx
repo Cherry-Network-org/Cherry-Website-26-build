@@ -1,8 +1,10 @@
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 
 export default function JoinPage() {
+  redirect("https://recruitments.cherrynetwork.in/");
   return (
     <div className="min-h-screen bg-[#0b0b0b] text-white">
       <NavBar activeLabel="JOIN" />
